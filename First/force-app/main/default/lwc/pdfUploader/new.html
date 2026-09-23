@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smooth PPC Testimonials</title>
+
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .ppc-testimonials {
+
+            position: relative;
+
+            padding: 100px 0;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(9, 85, 149, .30),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(53, 198, 255, .12),
+                    transparent 30%
+                ),
+                #061522;
+        }
+
+
+        .ppc-testimonials .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .ppc-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 9px 17px;
+
+            border-radius: 50px;
+
+            color: #fff;
+
+            background:
+                rgba(255,255,255,.07);
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .ppc-badge i {
+
+            color: #35c6ff;
+
+            margin-right: 8px;
+        }
+
+
+        .ppc-testimonials h2 {
+
+            color: #fff;
+
+            max-width: 900px;
+
+            margin: 0 auto 18px;
+
+            font-size: 47px;
+
+            line-height: 1.15;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+
+        .ppc-testimonials h2 span {
+
+            color: #35c6ff;
+        }
+
+
+        .ppc-subtitle {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #aebdca;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           SLIDER
+        ===================================================== */
+
+        .ppc-slider {
+
+            position: relative;
+
+            margin-top: 60px;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+        }
+
+
+        /* =====================================================
+           SLIDE TRACK
+        ===================================================== */
+
+        .ppc-track {
+
+            display: flex;
+
+            width: 100%;
+
+            transition:
+                transform 1s cubic-bezier(.65,0,.35,1);
+
+            will-change: transform;
+        }
+
+
+        /* =====================================================
+           EACH SLIDE
+        ===================================================== */
+
+        .ppc-slide {
+
+            flex: 0 0 100%;
+
+            width: 100%;
+
+            padding: 0;
+
+            opacity: .55;
+
+            transform: scale(.985);
+
+            transition:
+                opacity .8s ease,
+                transform 1s cubic-bezier(.65,0,.35,1);
+
+            will-change: transform, opacity;
+        }
+
+
+        .ppc-slide.active {
+
+            opacity: 1;
+
+            transform: scale(1);
+        }
+
+
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .ppc-card {
+
+            position: relative;
+
+            padding: 45px;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.10),
+                    rgba(255,255,255,.035)
+                );
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,.35);
+
+            backdrop-filter: blur(15px);
+
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .ppc-big-quote {
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 35px;
+
+            color:
+                rgba(53,198,255,.09);
+
+            font-size: 85px;
+
+            line-height: 1;
+        }
+
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .ppc-label {
+
+            color: #35c6ff;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 17px;
+        }
+
+
+        .ppc-title {
+
+            color: #fff;
+
+            font-size: 29px;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            max-width: 650px;
+        }
+
+
+        .ppc-description {
+
+            color: #cbd6de;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            max-width: 650px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           STARS
+        ===================================================== */
+
+        .ppc-stars {
+
+            margin-bottom: 25px;
+        }
+
+
+        .ppc-stars i {
+
+            color: #ffc107;
+
+            font-size: 15px;
+
+            margin-right: 3px;
+        }
+
+
+        /* =====================================================
+           CLIENT
+        ===================================================== */
+
+        .ppc-client {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .ppc-client img {
+
+            width: 56px;
+
+            height: 56px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin-right: 14px;
+
+            border:
+                3px solid rgba(53,198,255,.35);
+        }
+
+
+        .ppc-client-name {
+
+            color: #fff;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-bottom: 3px;
+        }
+
+
+        .ppc-client-role {
+
+            color: #91a3b0;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESULT BOX
+        ===================================================== */
+
+        .ppc-results {
+
+            position: relative;
+
+            min-height: 350px;
+
+            padding: 32px;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #095595,
+                    #06385f
+                );
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,.20);
+        }
+
+
+        .ppc-results-title {
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .ppc-result {
+
+            padding: 16px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.14);
+        }
+
+
+        .ppc-result:last-child {
+
+            border-bottom: 0;
+        }
+
+
+        .ppc-number {
+
+            color: #fff;
+
+            font-size: 35px;
+
+            line-height: 1;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+        }
+
+
+        .ppc-number span {
+
+            color: #50d3ff;
+        }
+
+
+        .ppc-result-text {
+
+            color: #c7d7e3;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           TRUST
+        ===================================================== */
+
+        .ppc-trust {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-top: 15px;
+
+            color: #c8d7e0;
+
+            font-size: 12px;
+        }
+
+
+        .ppc-trust i {
+
+            width: 28px;
+
+            height: 28px;
+
+            border-radius: 50%;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                rgba(39,201,123,.13);
+
+            color: #39d98a;
+
+            margin-right: 8px;
+        }
+
+
+        /* =====================================================
+           CONTROLS
+        ===================================================== */
+
+        .ppc-controls {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-top: 30px;
+        }
+
+
+        .ppc-arrow {
+
+            width: 47px;
+
+            height: 47px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(255,255,255,.15);
+
+            background:
+                rgba(255,255,255,.05);
+
+            color: #fff;
+
+            cursor: pointer;
+
+            margin: 0 6px;
+
+            transition:
+                all .3s ease;
+        }
+
+
+        .ppc-arrow:hover {
+
+            background: #095595;
+
+            border-color: #095595;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(9,85,149,.30);
+        }
+
+
+        /* =====================================================
+           DOTS
+        ===================================================== */
+
+        .ppc-dots {
+
+            display: flex;
+
+            align-items: center;
+
+            margin: 0 8px;
+        }
+
+
+        .ppc-dot {
+
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.25);
+
+            margin: 0 4px;
+
+            cursor: pointer;
+
+            transition:
+                all .45s cubic-bezier(.65,0,.35,1);
+        }
+
+
+        .ppc-dot.active {
+
+            width: 25px;
+
+            border-radius: 20px;
+
+            background: #35c6ff;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .ppc-cta {
+
+            text-align: center;
+
+            margin-top: 50px;
+        }
+
+
+        .ppc-cta p {
+
+            color: #9eafbc;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .ppc-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 15px 27px;
+
+            border-radius: 8px;
+
+            background: #fff;
+
+            color: #095595 !important;
+
+            text-decoration: none !important;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                all .3s ease;
+        }
+
+
+        .ppc-btn i {
+
+            margin-left: 10px;
+
+            transition:
+                transform .3s ease;
+        }
+
+
+        .ppc-btn:hover {
+
+            background: #095595;
+
+            color: #fff !important;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(9,85,149,.35);
+        }
+
+
+        .ppc-btn:hover i {
+
+            transform: translateX(4px);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media(max-width:991px) {
+
+            .ppc-testimonials {
+
+                padding: 80px 0;
+            }
+
+
+            .ppc-testimonials h2 {
+
+                font-size: 38px;
+            }
+
+
+            .ppc-results {
+
+                margin-top: 30px;
+
+                min-height: auto;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media(max-width:767px) {
+
+            .ppc-testimonials {
+
+                padding: 65px 15px;
+            }
+
+
+            .ppc-testimonials h2 {
+
+                font-size: 30px;
+            }
+
+
+            .ppc-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .ppc-slider {
+
+                margin-top: 40px;
+            }
+
+
+            .ppc-card {
+
+                padding: 28px 22px;
+
+                border-radius: 22px;
+            }
+
+
+            .ppc-title {
+
+                font-size: 23px;
+            }
+
+
+            .ppc-description {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .ppc-results {
+
+                padding: 25px 21px;
+            }
+
+
+            .ppc-number {
+
+                font-size: 30px;
+            }
+
+
+            .ppc-big-quote {
+
+                font-size: 60px;
+
+                right: 15px;
+
+                top: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PPC TESTIMONIAL SECTION
+========================================================= -->
+
+<section class="ppc-testimonials">
+
+
+    <div class="container">
+
+
+        <!-- HEADER -->
+
+        <div class="text-center">
+
+            <div class="ppc-badge">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Client Success Stories
+
+            </div>
+
+
+            <h2>
+
+                Don't Just Take Our Word For It —
+
+                <span>See The Results.</span>
+
+            </h2>
+
+
+            <p class="ppc-subtitle">
+
+                Real businesses. Real campaigns. Real growth.
+                See how our PPC strategies turn advertising budgets
+                into measurable business results.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SLIDER
+        ================================================== -->
+
+        <div class="ppc-slider" id="ppcSlider">
+
+
+            <div class="ppc-track" id="ppcTrack">
+
+
+                <!-- =================================================
+                     SLIDE 1
+                ================================================= -->
+
+                <div class="ppc-slide active">
+
+
+                    <div class="ppc-card">
+
+
+                        <i class="fa-solid fa-quote-right ppc-big-quote"></i>
+
+
+                        <div class="row align-items-center">
+
+
+                            <!-- LEFT -->
+
+                            <div class="col-lg-7">
+
+
+                                <div class="ppc-label">
+
+                                    <i class="fa-solid fa-circle-check mr-1"></i>
+
+                                    Verified Client Experience
+
+                                </div>
+
+
+                                <h3 class="ppc-title">
+
+                                    "Our leads increased while our
+                                    cost per acquisition dropped."
+
+                                </h3>
+
+
+                                <p class="ppc-description">
+
+                                    We had been spending heavily on Google Ads
+                                    without seeing consistent results. The PPC
+                                    strategy completely changed our campaigns.
+                                    Within a few months, we were generating
+                                    higher-quality leads at a much better cost.
+
+                                </p>
+
+
+                                <div class="ppc-stars">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+
+                                <div class="ppc-client">
+
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=12"
+                                        alt="Michael Anderson">
+
+
+                                    <div>
+
+                                        <div class="ppc-client-name">
+
+                                            Michael Anderson
+
+                                        </div>
+
+
+                                        <div class="ppc-client-role">
+
+                                            Marketing Director · B2B Company
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- RIGHT -->
+
+                            <div class="col-lg-5">
+
+
+                                <div class="ppc-results">
+
+
+                                    <div class="ppc-results-title">
+
+                                        <i class="fa-solid fa-chart-simple mr-2"></i>
+
+                                        Campaign Results
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            +<span>187%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Qualified Leads
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            -<span>42%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Cost Per Lead
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            <span>3.8x</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Return On Ad Spend
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-trust">
+
+                                        <i class="fa-solid fa-check"></i>
+
+                                        Data-backed PPC growth
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SLIDE 2
+                ================================================== -->
+
+                <div class="ppc-slide">
+
+
+                    <div class="ppc-card">
+
+
+                        <i class="fa-solid fa-quote-right ppc-big-quote"></i>
+
+
+                        <div class="row align-items-center">
+
+
+                            <div class="col-lg-7">
+
+
+                                <div class="ppc-label">
+
+                                    <i class="fa-solid fa-circle-check mr-1"></i>
+
+                                    Verified Client Experience
+
+                                </div>
+
+
+                                <h3 class="ppc-title">
+
+                                    "Finally, our PPC campaigns
+                                    became predictable."
+
+                                </h3>
+
+
+                                <p class="ppc-description">
+
+                                    Before working together, our campaigns
+                                    were inconsistent and difficult to scale.
+                                    The new account structure, targeting and
+                                    optimization process gave us much more
+                                    control over our advertising spend.
+
+                                </p>
+
+
+                                <div class="ppc-stars">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+
+                                <div class="ppc-client">
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=32"
+                                        alt="Sarah Williams">
+
+
+                                    <div>
+
+                                        <div class="ppc-client-name">
+
+                                            Sarah Williams
+
+                                        </div>
+
+
+                                        <div class="ppc-client-role">
+
+                                            Founder · E-Commerce Brand
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-lg-5">
+
+
+                                <div class="ppc-results">
+
+
+                                    <div class="ppc-results-title">
+
+                                        <i class="fa-solid fa-chart-simple mr-2"></i>
+
+                                        Campaign Results
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            +<span>154%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Conversion Rate
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            -<span>36%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Acquisition Cost
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            <span>4.2x</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Return On Ad Spend
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-trust">
+
+                                        <i class="fa-solid fa-check"></i>
+
+                                        Optimized for profitable growth
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SLIDE 3
+                ================================================== -->
+
+                <div class="ppc-slide">
+
+
+                    <div class="ppc-card">
+
+
+                        <i class="fa-solid fa-quote-right ppc-big-quote"></i>
+
+
+                        <div class="row align-items-center">
+
+
+                            <div class="col-lg-7">
+
+
+                                <div class="ppc-label">
+
+                                    <i class="fa-solid fa-circle-check mr-1"></i>
+
+                                    Verified Client Experience
+
+                                </div>
+
+
+                                <h3 class="ppc-title">
+
+                                    "We stopped wasting money on
+                                    clicks that didn't convert."
+
+                                </h3>
+
+
+                                <p class="ppc-description">
+
+                                    The biggest difference was the focus on
+                                    qualified traffic instead of simply
+                                    increasing clicks. Our campaigns became
+                                    much more focused, and our sales team
+                                    started receiving better opportunities.
+
+                                </p>
+
+
+                                <div class="ppc-stars">
+
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+
+                                <div class="ppc-client">
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=47"
+                                        alt="David Miller">
+
+
+                                    <div>
+
+                                        <div class="ppc-client-name">
+
+                                            David Miller
+
+                                        </div>
+
+
+                                        <div class="ppc-client-role">
+
+                                            CEO · Professional Services
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-lg-5">
+
+
+                                <div class="ppc-results">
+
+
+                                    <div class="ppc-results-title">
+
+                                        <i class="fa-solid fa-chart-simple mr-2"></i>
+
+                                        Campaign Results
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            +<span>219%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Qualified Opportunities
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            -<span>48%</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Wasted Ad Spend
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-result">
+
+                                        <div class="ppc-number">
+
+                                            <span>5.1x</span>
+
+                                        </div>
+
+                                        <div class="ppc-result-text">
+
+                                            Return On Ad Spend
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ppc-trust">
+
+                                        <i class="fa-solid fa-check"></i>
+
+                                        Built around measurable ROI
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTROLS
+        ================================================== -->
+
+        <div class="ppc-controls">
+
+
+            <button
+                type="button"
+                class="ppc-arrow"
+                id="ppcPrev">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+
+            <div class="ppc-dots">
+
+                <span
+                    class="ppc-dot active"
+                    data-index="0">
+                </span>
+
+                <span
+                    class="ppc-dot"
+                    data-index="1">
+                </span>
+
+                <span
+                    class="ppc-dot"
+                    data-index="2">
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="ppc-arrow"
+                id="ppcNext">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- CTA -->
+
+        <div class="ppc-cta">
+
+            <p>
+
+                Ready to turn your ad spend into measurable growth?
+
+            </p>
+
+
+            <a
+                href="#contact"
+                class="ppc-btn">
+
+                GET YOUR PPC STRATEGY
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const track =
+        document.getElementById("ppcTrack");
+
+
+    const slides =
+        document.querySelectorAll(".ppc-slide");
+
+
+    const dots =
+        document.querySelectorAll(".ppc-dot");
+
+
+    const next =
+        document.getElementById("ppcNext");
+
+
+    const prev =
+        document.getElementById("ppcPrev");
+
+
+    const slider =
+        document.getElementById("ppcSlider");
+
+
+    let current = 0;
+
+    let timer;
+
+
+    /* =====================================================
+       MOVE SLIDER
+    ===================================================== */
+
+    function moveSlider(index) {
+
+
+        if (index >= slides.length) {
+
+            index = 0;
+
+        }
+
+
+        if (index < 0) {
+
+            index = slides.length - 1;
+
+        }
+
+
+        current = index;
+
+
+        /*
+         * Move complete track.
+         * This prevents individual slides from
+         * jumping or disappearing.
+         */
+
+        track.style.transform =
+            "translate3d(-" +
+            (current * 100) +
+            "%, 0, 0)";
+
+
+        slides.forEach(function (slide, i) {
+
+            if (i === current) {
+
+                slide.classList.add("active");
+
+            } else {
+
+                slide.classList.remove("active");
+
+            }
+
+        });
+
+
+        dots.forEach(function (dot, i) {
+
+            dot.classList.toggle(
+                "active",
+                i === current
+            );
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       NEXT
+    ===================================================== */
+
+    function nextSlide() {
+
+        moveSlider(current + 1);
+
+    }
+
+
+
+    /* =====================================================
+       PREVIOUS
+    ===================================================== */
+
+    function previousSlide() {
+
+        moveSlider(current - 1);
+
+    }
+
+
+
+    /* =====================================================
+       AUTO PLAY
+    ===================================================== */
+
+    function startAutoPlay() {
+
+
+        clearInterval(timer);
+
+
+        timer = setInterval(function () {
+
+            nextSlide();
+
+        }, 6500);
+
+    }
+
+
+
+    /* =====================================================
+       NEXT BUTTON
+    ===================================================== */
+
+    next.addEventListener(
+        "click",
+        function () {
+
+            nextSlide();
+
+            startAutoPlay();
+
+        }
+    );
+
+
+
+    /* =====================================================
+       PREVIOUS BUTTON
+    ===================================================== */
+
+    prev.addEventListener(
+        "click",
+        function () {
+
+            previousSlide();
+
+            startAutoPlay();
+
+        }
+    );
+
+
+
+    /* =====================================================
+       DOT CLICK
+    ===================================================== */
+
+    dots.forEach(function (dot, index) {
+
+        dot.addEventListener(
+            "click",
+            function () {
+
+                moveSlider(index);
+
+                startAutoPlay();
+
+            }
+        );
+
+    });
+
+
+
+    /* =====================================================
+       PAUSE WHEN MOUSE IS OVER
+    ===================================================== */
+
+    slider.addEventListener(
+        "mouseenter",
+        function () {
+
+            clearInterval(timer);
+
+        }
+    );
+
+
+    slider.addEventListener(
+        "mouseleave",
+        function () {
+
+            startAutoPlay();
+
+        }
+    );
+
+
+
+    /* =====================================================
+       TOUCH SWIPE
+    ===================================================== */
+
+    let startX = 0;
+
+    let endX = 0;
+
+
+    slider.addEventListener(
+        "touchstart",
+        function (event) {
+
+            startX =
+                event.touches[0].clientX;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    slider.addEventListener(
+        "touchend",
+        function (event) {
+
+            endX =
+                event.changedTouches[0].clientX;
+
+
+            const distance =
+                startX - endX;
+
+
+            if (Math.abs(distance) > 50) {
+
+
+                if (distance > 0) {
+
+                    nextSlide();
+
+                } else {
+
+                    previousSlide();
+
+                }
+
+
+                startAutoPlay();
+
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+
+    /* =====================================================
+       INITIALIZE
+    ===================================================== */
+
+    moveSlider(0);
+
+    startAutoPlay();
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

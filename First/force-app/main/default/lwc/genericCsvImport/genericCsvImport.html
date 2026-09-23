@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="Generic CSV Import pdf sections" icon-name="utility:upload">
+
+        <div class="slds-p-around_medium">
+            <lightning-input
+                type="file"
+                label="Upload CSV File"
+                accept=".csv,.pdf"
+                onchange={handleFileChange}>
+            </lightning-input>
+
+            <template if:true={fileName}>
+                <p class="slds-m-top_small">
+                    <strong>Selected File:</strong> {fileName}
+                </p>
+            </template>
+
+            <!-- Submit Button -->
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    label="Submit"
+                    variant="brand"
+                    onclick={handleSubmit}
+                    disabled={disableSubmit}>
+                </lightning-button>
+            </div>
+
+            <!-- Spinner -->
+            <template if:true={isLoading}>
+                <div class="slds-m-top_medium">
+                    <lightning-spinner
+                        alternative-text="Processing"
+                        size="medium">
+                    </lightning-spinner>
+                </div>
+            </template>
+
+            <!-- CSV Preview -->
+            <template if:true={csvRecords}>
+                <div class="slds-m-top_large">
+                    <h3 class="slds-text-heading_small">
+                        Parsed CSV Data
+                    </h3>
+
+                    <pre>{formattedRecords}</pre>
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

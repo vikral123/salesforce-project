@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Excel Data</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message channel to send Excel data</description>
+
+    <lightningMessageFields>
+        <fieldName>excelData</fieldName>
+        <description>Excel JSON Data</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

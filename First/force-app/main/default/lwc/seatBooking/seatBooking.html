@@ -1,0 +1,304 @@
+<template>
+    <c-seat-dashboard></c-seat-dashboard>
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+
+        <div>
+            <h1 class="title">Seat Booking Dashboard</h1>
+            <p class="subtitle">
+                Manage floor-wise seat reservations
+            </p>
+        </div>
+
+        <div class="seat-summary">
+            <div class="summary-card">
+                <span>Total Seats</span>
+                <h2>{seatCount}</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <lightning-card>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+
+            <div class="search-box">
+                <lightning-input
+                    type="search"
+                    variant="label-hidden"
+                    placeholder=" Search Customer..."
+                    onchange={handleSearch}>
+                </lightning-input>
+            </div>
+
+            <div class="floor-box">
+                <lightning-combobox
+                    value={selectedFloor}
+                    placeholder="Select Floor"
+                    options={floorOptions}
+                    onchange={handleFloorChange}>
+                </lightning-combobox>
+            </div>
+
+        </div>
+
+        <!-- Seat Grid -->
+
+        <div class="seat-grid">
+
+            <template for:each={seats} for:item="seat">
+
+                <!-- Removed onclick from complete card -->
+                <div
+                    key={seat.Id}
+                    class={seat.uiClass}>
+
+                    <!-- Card Header -->
+
+                    <div class="seat-header">
+
+                        <div class="seat-number">
+                            {seat.Name}
+                        </div>
+
+                        <template lwc:if={seat.isBooked}>
+
+                            <lightning-icon
+                                icon-name="utility:close"
+                                size="small"
+                                alternative-text="Booked">
+                            </lightning-icon>
+
+                        </template>
+
+                        <template lwc:else>
+
+                            <lightning-icon
+                                icon-name="utility:check"
+                                size="small"
+                                alternative-text="Available">
+                            </lightning-icon>
+
+                        </template>
+
+                    </div>
+
+                    <!-- Seat Status -->
+
+                    <div class={seat.badgeClass}>
+                        {seat.statusLabel}
+                    </div>
+
+                    <!-- Customer -->
+
+                   <template if:true={seat.isBooked}>
+
+    <div class="booked-user">
+
+        <lightning-icon
+            icon-name="standard:user"
+            size="xx-small">
+        </lightning-icon>
+
+        <span>{seat.customerName}</span>
+
+    </div>
+
+    <div
+        class="available-text"
+        data-id={seat.Id}
+        onclick={handleSeatClick}>
+        {seat.buttonLabel}
+    </div>
+
+</template>
+
+<template if:false={seat.isBooked}>
+
+    <div
+        class="available-text"
+        data-id={seat.Id}
+        onclick={handleSeatClick}>
+        {seat.buttonLabel}
+    </div>
+
+</template>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+    <!-- Confirm Booking Modal -->
+
+    <template if:true={showConfirmModal}>
+
+        <section class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container">
+
+                <header class="slds-modal__header modal-header">
+
+                    <h2>Confirm Booking</h2>
+
+                </header>
+
+                <div class="slds-modal__content slds-p-around_large">
+
+                    <p>
+                        You are booking
+                    </p>
+
+                    <h2 class="seat-confirm">
+                        {selectedSeatName}
+                    </h2>
+
+                </div>
+
+                <footer class="slds-modal__footer">
+
+                    <lightning-button
+                        label="Cancel"
+                        onclick={closeModal}>
+                    </lightning-button>
+
+                    <lightning-button
+                        variant="brand"
+                        label="Continue"
+                        onclick={confirmSeat}>
+                    </lightning-button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+
+    <!-- Customer Information -->
+
+    <template if:true={showDetailsModal}>
+
+        <section class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container">
+
+                <header class="slds-modal__header modal-header">
+
+                    <h2>Customer Information</h2>
+
+                </header>
+
+                <div class="slds-modal__content slds-p-around_large">
+
+                    <lightning-input
+                        label="Customer Name"
+                        required
+                        onchange={handleName}>
+                    </lightning-input>
+
+                    <lightning-input
+                        type="email"
+                        label="Email Address"
+                        required
+                        onchange={handleEmail}>
+                    </lightning-input>
+
+                    <lightning-input
+                        label="Aadhaar Number"
+                        required
+                        onchange={handleAadhaar}>
+                    </lightning-input>
+
+                </div>
+
+                <footer class="slds-modal__footer">
+
+                    <lightning-button
+                        label="Cancel"
+                        onclick={closeModal}>
+                    </lightning-button>
+
+                    <lightning-button
+                        variant="brand"
+                        label="Book Seat"
+                        onclick={completeBooking}>
+                    </lightning-button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+
+    <!-- Customer Details -->
+
+    <template if:true={showBookedDetailsModal}>
+
+        <section class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container">
+
+                <header class="slds-modal__header modal-header">
+
+                    <h2>Booked Customer Details</h2>
+
+                </header>
+
+                <div class="slds-modal__content slds-p-around_large">
+
+                    <div class="detail-row">
+                        <strong>Name</strong>
+                        <span>{bookedCustomerName}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <strong>Email</strong>
+                        <span>{bookedCustomerEmail}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <strong>Aadhaar</strong>
+                        <span>{bookedCustomerAadhaar}</span>
+                    </div>
+
+                </div>
+
+                <footer class="slds-modal__footer">
+
+                    <lightning-button
+                        variant="brand"
+                        label="Close"
+                        onclick={closeModal}>
+                    </lightning-button>
+
+                    <lightning-button
+                        variant="destructive"
+                        label="Cancel Booking"
+                        onclick={cancelBooking}>
+                    </lightning-button>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+
+</template>

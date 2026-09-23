@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectWeb Chat - Next-Gen Web Chat Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6', // Blue-green / Teal
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e', // Fresh Green
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        emeraldGlow: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+   
+    <style>
+        /* Scoped Container Wrapper for Unyson Builder & Active Theme Protection */
+        .unyson-webchat-landing {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+            line-height: 1.5;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+
+        .unyson-webchat-landing *,
+        .unyson-webchat-landing *::before,
+        .unyson-webchat-landing *::after {
+            box-sizing: border-box;
+        }
+
+
+        /* Frosted White & Mint Glass Elements */
+        .unyson-webchat-landing .glass {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(20, 184, 166, 0.2);
+        }
+
+
+        .unyson-webchat-landing .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 250, 0.9) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(20, 184, 166, 0.22);
+            box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.08);
+        }
+
+
+        .unyson-webchat-landing .glow-effect {
+            box-shadow: 0 12px 40px -10px rgba(16, 185, 129, 0.25);
+        }
+
+
+        .unyson-webchat-landing .fw-container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+
+
+        /* Hero Video Canvas Background */
+        .unyson-hero-video-wrap {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+
+        .unyson-hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.92;
+            filter: brightness(1.02) contrast(1.04) saturate(1.1);
+            transition: opacity 0.4s ease, filter 0.4s ease;
+        }
+
+
+        /* Subtle text shadow for high readability over media */
+        .unyson-hero-text-glow {
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.85);
+        }
+
+
+        /* Custom Teal & Green Scrollbar */
+        .unyson-webchat-landing ::-webkit-scrollbar {
+            width: 8px;
+        }
+        .unyson-webchat-landing ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        .unyson-webchat-landing ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .unyson-webchat-landing ::-webkit-scrollbar-thumb:hover {
+            background: #14b8a6;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+
+    <!-- Scoped Parent Container for Unyson Builder Integration -->
+    <div class="unyson-webchat-landing">
+
+
+        <!-- ==========================================================================
+             HERO SECTION: Live Video Background + White, Blue-Green & Green Palette
+             ========================================================================== -->
+        <section class="unyson-section relative pt-20 pb-20 md:pt-28 md:pb-32 overflow-hidden min-h-[740px] flex items-center bg-gradient-to-b from-white via-teal-50/40 to-white">
+           
+            <!-- LIVE VIDEO BACKGROUND WRAPPER -->
+            <div class="unyson-hero-video-wrap" id="hero-video-wrapper">
+                <video id="hero-background-video" autoplay loop muted playsinline webkit-playsinline preload="auto" class="unyson-hero-video">
+                    <source src="https://www.pcsconnect.us/wp-content/uploads/2026/09/Radio-TV-Hero-Banner-3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+               
+                <!-- White, Teal and Soft Mint Vignette Overlays -->
+                <div id="video-overlay-tint" class="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-white/70 pointer-events-none transition-opacity duration-300"></div>
+                <div id="video-overlay-side" class="absolute inset-0 bg-gradient-to-r from-white/90 via-teal-50/40 to-white/60 pointer-events-none transition-opacity duration-300"></div>
+            </div>
+
+
+            <!-- Ambient Blue-Green & Emerald Glow Orbs -->
+            <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-teal-400/20 rounded-full blur-[140px] pointer-events-none z-[1]"></div>
+            <div class="absolute top-1/3 right-10 w-[420px] h-[420px] bg-emerald-400/20 rounded-full blur-[130px] pointer-events-none z-[1]"></div>
+
+
+            <div class="fw-container relative z-10 w-full">
+               
+                <!-- Top Status Bar & Live Video Controls -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-8">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-teal-300/80 text-teal-800 text-xs font-semibold backdrop-blur-md shadow-sm">
+                        <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span class="text-slate-900 font-bold">ConnectWeb Chat 2.0</span>
+                        <span class="text-teal-600 hidden sm:inline">| Video Banner Synced</span>
+                    </div>
+
+
+                    <!-- Background Video Display Controls -->
+                    <div class="flex items-center space-x-2 bg-white/90 backdrop-blur-md border border-teal-200 rounded-xl px-3 py-1.5 text-xs text-slate-700 shadow-sm">
+                        <span class="text-[11px] text-teal-700 font-semibold hidden sm:inline">
+                            <i class="fa-solid fa-video text-teal-500 mr-1.5"></i> Video Controls:
+                        </span>
+                       
+                        <!-- Toggle Video Clarity -->
+                        <button onclick="toggleVideoClarity()" id="video-clarity-btn" class="hover:text-teal-700 px-2 py-0.5 rounded bg-teal-50 border border-teal-200 text-[11px] text-teal-800 transition-colors flex items-center gap-1.5 font-medium" title="Toggle Clean Overlay">
+                            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i>
+                            <span id="clarity-label">Vibrant View: ON</span>
+                        </button>
+
+
+                        <button onclick="toggleVideoPlayback()" id="video-play-btn" class="hover:text-teal-700 text-slate-600 p-1.5 transition-colors" title="Pause / Play Video">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                        <button onclick="toggleVideoAudio()" id="video-mute-btn" class="hover:text-teal-700 text-slate-600 p-1.5 transition-colors" title="Mute / Unmute Audio">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                   
+                    <!-- Left Hero Copy Column -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="p-6 sm:p-8 lg:p-0 rounded-3xl backdrop-blur-md lg:backdrop-blur-none bg-white/80 lg:bg-transparent border border-teal-100 lg:border-none shadow-xl lg:shadow-none">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.14]">
+                                Turn Website Visitors Into
+                                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 via-emerald-600 to-green-600">
+                                    Paying Customers
+                                </span>
+                                in Real Time
+                            </h1>
+                           
+                            <p class="mt-6 text-base sm:text-lg text-slate-700 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                                Engage high-intent visitors immediately, automate live lead capture 24/7, and close deals directly from your WordPress Unyson site with ConnectWeb Chat.
+                            </p>
+
+
+                            <!-- CTA Action Buttons -->
+                            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                <button onclick="toggleUnysonWidget(true)" class="w-full sm:w-auto px-8 py-4 text-sm font-bold text-white bg-gradient-to-r from-teal-600 via-emerald-600 to-green-600 hover:from-teal-500 hover:to-green-500 rounded-xl shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/40 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center space-x-2">
+                                    <span>Start Free 14-Day Trial</span>
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </button>
+                                <a href="#unyson-live-demo" class="w-full sm:w-auto px-8 py-4 text-sm font-semibold text-teal-900 bg-white/95 border border-teal-300 rounded-xl hover:bg-teal-50/80 hover:border-teal-400 backdrop-blur-md transition-all duration-200 flex items-center justify-center space-x-2 shadow-sm">
+                                    <i class="fa-solid fa-circle-play text-emerald-600"></i>
+                                    <span>Test Interactive Demo</span>
+                                </a>
+                            </div>
+
+
+                            <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-xs text-slate-600 font-semibold">
+                                <span class="flex items-center"><i class="fa-solid fa-shield-halved text-emerald-600 mr-2"></i> No credit card needed</span>
+                                <span class="flex items-center"><i class="fa-solid fa-plug-circle-check text-teal-600 mr-2"></i> Unyson 1-click drop-in</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Right Column: Interactive Chat UI Simulator -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="glass-card rounded-2xl p-6 shadow-2xl relative glow-effect border border-teal-200/90 bg-white/95 backdrop-blur-xl">
+                           
+                            <!-- Simulator Header -->
+                            <div class="flex items-center justify-between pb-4 border-b border-teal-100">
+                                <div class="flex items-center space-x-3">
+                                    <div class="relative">
+                                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-teal-600 via-emerald-500 to-green-600 flex items-center justify-center font-bold text-white text-xs shadow-md">
+                                            CW
+                                        </div>
+                                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full animate-pulse"></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-slate-900">ConnectWeb Concierge</h4>
+                                        <p class="text-xs text-teal-700 flex items-center gap-1 font-medium">
+                                            <span class="inline-block w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Live & ready to convert
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="text-[11px] bg-teal-50 text-teal-700 font-semibold px-2.5 py-1 rounded-md border border-teal-200">
+                                    Live Simulator
+                                </span>
+                            </div>
+
+
+                            <!-- Simulator Messages -->
+                            <div class="py-6 space-y-4 min-h-[250px] flex flex-col justify-end text-xs">
+                                <div class="flex items-start space-x-2.5">
+                                    <div class="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-xs shrink-0 shadow-sm">
+                                        <i class="fa-solid fa-headset text-white"></i>
+                                    </div>
+                                    <div class="bg-teal-50/80 text-slate-800 p-3.5 rounded-2xl rounded-tl-none border border-teal-100 max-w-[85%] shadow-sm leading-relaxed">
+                                        👋 Welcome to ConnectWeb Chat! How can we assist your business today?
+                                    </div>
+                                </div>
+
+
+                                <div class="flex items-start justify-end space-x-2.5">
+                                    <div class="bg-gradient-to-r from-teal-600 to-emerald-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] shadow-md leading-relaxed">
+                                        Does ConnectWeb Chat support our white, blue-green, and green gradient branding?
+                                    </div>
+                                </div>
+
+
+                                <div class="flex items-start space-x-2.5">
+                                    <div class="w-7 h-7 rounded-full bg-emerald-600 flex items-center justify-center text-xs shrink-0 shadow-sm">
+                                        <i class="fa-solid fa-robot text-white"></i>
+                                    </div>
+                                    <div class="bg-teal-50/80 text-slate-800 p-3.5 rounded-2xl rounded-tl-none border border-teal-100 max-w-[85%] space-y-2.5 shadow-sm leading-relaxed">
+                                        <p>Yes! It perfectly harmonizes with white surfaces, teal highlights, and emerald green gradient accents.</p>
+                                        <button onclick="toggleUnysonWidget(true)" class="text-[11px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold px-3 py-1.5 rounded-lg border border-emerald-300 w-full text-left flex items-center justify-between transition-colors">
+                                            <span>⚡ Open live floating widget</span>
+                                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Simulator Input Bar -->
+                            <div class="pt-3 border-t border-teal-100 flex items-center gap-2">
+                                <div class="flex-1 bg-slate-50 border border-teal-200 rounded-xl px-3.5 py-2 text-xs text-slate-500 flex items-center justify-between">
+                                    <span>Type your question...</span>
+                                    <i class="fa-regular fa-face-smile text-slate-400"></i>
+                                </div>
+                                <button onclick="toggleUnysonWidget(true)" class="w-8 h-8 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white rounded-xl flex items-center justify-center transition-colors shadow-sm">
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             SOCIAL PROOF & INTEGRATIONS MODULE
+             ========================================================================== -->
+        <section class="unyson-section py-14 bg-gradient-to-b from-white via-teal-50/30 to-white border-y border-teal-100 relative z-10">
+            <div class="fw-container">
+                <p class="text-center text-xs font-bold tracking-wider text-teal-800 uppercase mb-8">
+                    Syncs seamlessly with your favorite marketing & CRM platforms
+                </p>
+
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-90">
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-teal-700 transition-colors">
+                        <i class="fa-brands fa-wordpress text-2xl text-teal-600"></i>
+                        <span class="font-bold text-base">WordPress</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-emerald-700 transition-colors">
+                        <i class="fa-brands fa-shopify text-2xl text-emerald-600"></i>
+                        <span class="font-bold text-base">Shopify</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-teal-700 transition-colors">
+                        <i class="fa-brands fa-hubspot text-2xl text-teal-600"></i>
+                        <span class="font-bold text-base">HubSpot</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-green-700 transition-colors">
+                        <i class="fa-solid fa-bolt text-2xl text-green-600"></i>
+                        <span class="font-bold text-base">Zapier</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-teal-700 transition-colors">
+                        <i class="fa-brands fa-stripe text-2xl text-teal-700"></i>
+                        <span class="font-bold text-base">Stripe</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-700 hover:text-emerald-700 transition-colors">
+                        <i class="fa-brands fa-salesforce text-2xl text-emerald-600"></i>
+                        <span class="font-bold text-base">Salesforce</span>
+                    </div>
+                </div>
+
+
+                <!-- Conversion KPI Counters -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-teal-100 text-center">
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-slate-900">10,000+</h3>
+                        <p class="text-xs text-slate-600 mt-1 font-medium">Websites Powered by ConnectWeb</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-emerald-600">45% Avg.</h3>
+                        <p class="text-xs text-slate-600 mt-1 font-medium">Conversion Lift in First 30 Days</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-slate-900">&lt; 12 Sec</h3>
+                        <p class="text-xs text-slate-600 mt-1 font-medium">Average Automated Response Speed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             PAIN POINT COMPARISON SECTION
+             ========================================================================== -->
+        <section class="unyson-section py-20 bg-white relative">
+            <div class="fw-container">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block text-xs font-bold text-teal-700 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full border border-teal-200 mb-3">
+                        The Problem vs Solution
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                        Stop Losing 98% of Your Website Traffic To Stale Contact Forms
+                    </h2>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    <!-- Legacy Contact Form -->
+                    <div class="glass-card rounded-2xl p-8 border border-rose-200 bg-rose-50/50 relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rose-100 border border-rose-300 flex items-center justify-center text-rose-600 text-xl mb-6">
+                                <i class="fa-solid fa-hourglass-end"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Old Contact Forms</h3>
+                            <ul class="space-y-4 text-xs text-slate-700">
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-xmark text-rose-500 mt-0.5 shrink-0"></i>
+                                    <span>Buyers wait 24-48 hours and buy from faster competitors instead.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-xmark text-rose-500 mt-0.5 shrink-0"></i>
+                                    <span>High-friction multi-field forms result in immediate page bounce rates.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-xmark text-rose-500 mt-0.5 shrink-0"></i>
+                                    <span>Zero interaction after business hours leads to empty pipelines.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-rose-200">
+                            <p class="text-xs font-bold text-rose-600">Result: High Ad Spend, Lost Revenue</p>
+                        </div>
+                    </div>
+
+
+                    <!-- ConnectWeb Chat Advantage -->
+                    <div class="glass-card rounded-2xl p-8 border border-emerald-300 bg-gradient-to-br from-white via-teal-50/70 to-emerald-50/70 relative overflow-hidden flex flex-col justify-between glow-effect">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white flex items-center justify-center text-xl mb-6 shadow-md">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">ConnectWeb Chat</h3>
+                            <ul class="space-y-4 text-xs text-slate-700">
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                                    <span>Engage prospects in under 10 seconds while buying interest is peaked.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                                    <span>Automatic pre-chat contact extraction for phone and email leads.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                                    <span>AI auto-responders qualify leads and book appointments 24/7.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-emerald-200">
+                            <p class="text-xs font-bold text-emerald-700">Result: 3x More Revenue & Instantly Booked Calls</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             FEATURE HIGHLIGHTS GRID
+             ========================================================================== -->
+        <section class="unyson-section py-20 bg-gradient-to-b from-teal-50/40 via-white to-teal-50/30 border-t border-teal-100">
+            <div class="fw-container">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block text-xs font-bold text-teal-700 uppercase tracking-widest bg-white px-3 py-1 rounded-full border border-teal-200 mb-3 shadow-sm">
+                        Enterprise Capabilities
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Engineered For Fast, Scalable Conversion</h2>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="glass-card rounded-2xl p-6 border border-teal-100 bg-white hover:border-teal-400 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl mb-5 border border-teal-200 shadow-sm">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Instant Lead Capture</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Acquire verified visitor contact info automatically before initiating chat sessions.
+                        </p>
+                    </div>
+
+
+                    <!-- Feature 2 -->
+                    <div class="glass-card rounded-2xl p-6 border border-teal-100 bg-white hover:border-emerald-400 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-5 border border-emerald-200 shadow-sm">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Omnichannel SMS Sync</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Respond to web visitors directly from your phone via instant two-way SMS forwarding.
+                        </p>
+                    </div>
+
+
+                    <!-- Feature 3 -->
+                    <div class="glass-card rounded-2xl p-6 border border-teal-100 bg-white hover:border-green-400 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-green-50 text-green-700 flex items-center justify-center text-xl mb-5 border border-green-200 shadow-sm">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">AI Smart Responders</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Trained on your business FAQs to handle customer inquiries seamlessly day and night.
+                        </p>
+                    </div>
+
+
+                    <!-- Feature 4 -->
+                    <div class="glass-card rounded-2xl p-6 border border-teal-100 bg-white hover:border-teal-400 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl mb-5 border border-teal-200 shadow-sm">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Custom Brand Styling</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Harmonize colors, widget avatars, fonts, and launcher icons to fit your exact site identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             USE CASE TABS
+             ========================================================================== -->
+        <section class="unyson-section py-20 bg-white border-t border-teal-100">
+            <div class="fw-container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-block text-xs font-bold text-teal-700 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full border border-teal-200 mb-3">
+                        Tailored Workflows
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Built For Every Conversion Model</h2>
+                </div>
+
+
+                <div class="flex justify-center mb-10">
+                    <div class="glass p-1.5 rounded-2xl border border-teal-200 flex space-x-2 shadow-sm bg-white/90">
+                        <button onclick="switchUnysonTab('ecom')" id="unyson-tab-btn-ecom" class="unyson-usecase-tab px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-md">
+                            E-Commerce
+                        </button>
+                        <button onclick="switchUnysonTab('local')" id="unyson-tab-btn-local" class="unyson-usecase-tab px-5 py-2.5 rounded-xl text-xs font-semibold transition-all text-slate-600 hover:text-teal-700">
+                            Local Services
+                        </button>
+                        <button onclick="switchUnysonTab('saas')" id="unyson-tab-btn-saas" class="unyson-usecase-tab px-5 py-2.5 rounded-xl text-xs font-semibold transition-all text-slate-600 hover:text-teal-700">
+                            B2B & Agencies
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="max-w-4xl mx-auto">
+                    <!-- E-Commerce Tab -->
+                    <div id="unyson-tab-ecom" class="unyson-tab-content glass-card rounded-2xl p-8 border border-teal-200 bg-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg">
+                        <div>
+                            <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">E-Commerce Retargeting</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">Eliminate Cart Abandonment</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                                Proactively invite shoppers to ask questions or offer checkout incentives when cursor leaves the page.
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-700 font-medium">
+                                <p><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Real-time shipping and sizing answers</p>
+                                <p><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Dynamic discount voucher triggers</p>
+                            </div>
+                        </div>
+                        <div class="bg-teal-50/80 p-5 rounded-2xl border border-teal-200">
+                            <div class="text-xs text-teal-800 mb-2 font-bold">Cart Abandonment Trigger:</div>
+                            <div class="bg-white border border-teal-300 p-4 rounded-xl text-xs text-slate-800 shadow-sm leading-relaxed">
+                                "Hey there! Notice something you like? Use code <strong class="text-emerald-700 font-bold">SAVE10</strong> for 10% off your checkout right now."
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Local Services Tab -->
+                    <div id="unyson-tab-local" class="unyson-tab-content hidden glass-card rounded-2xl p-8 border border-teal-200 bg-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Local Services & Clinics</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">Book Appointments 24/7</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                                Allow local clients to request estimates and schedule visits outside standard clinic or store hours.
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-700 font-medium">
+                                <p><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Direct Google Calendar booking links</p>
+                                <p><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Instant dispatch alerts to your team</p>
+                            </div>
+                        </div>
+                        <div class="bg-emerald-50/80 p-5 rounded-2xl border border-emerald-200">
+                            <div class="text-xs text-emerald-800 mb-2 font-bold">After-Hours Auto Reply:</div>
+                            <div class="bg-white border border-emerald-300 p-4 rounded-xl text-xs text-slate-800 shadow-sm leading-relaxed">
+                                "Thanks for contacting us! Our office opens at 8am, but you can reserve your consultation slot online right now."
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- B2B Tab -->
+                    <div id="unyson-tab-saas" class="unyson-tab-content hidden glass-card rounded-2xl p-8 border border-teal-200 bg-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg">
+                        <div>
+                            <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">B2B & Growth Agencies</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">Fast-Track Enterprise Deals</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                                Route high-value corporate visitors straight to account managers for instant demos.
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-700 font-medium">
+                                <p><i class="fa-solid fa-check text-teal-600 mr-2"></i> Lead scoring & enrichment sync</p>
+                                <p><i class="fa-solid fa-check text-teal-600 mr-2"></i> Instant team member routing</p>
+                            </div>
+                        </div>
+                        <div class="bg-teal-50/80 p-5 rounded-2xl border border-teal-200">
+                            <div class="text-xs text-teal-800 mb-2 font-bold">Enterprise Pipeline Rule:</div>
+                            <div class="bg-white border border-teal-300 p-4 rounded-xl text-xs text-slate-800 shadow-sm leading-relaxed">
+                                "Evaluating ConnectWeb for high volume websites? Let me connect you directly with our Enterprise Architect."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             FAQ SECTION
+             ========================================================================== -->
+        <section class="unyson-section py-20 bg-gradient-to-b from-white via-teal-50/30 to-white border-t border-teal-100">
+            <div class="fw-container max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="inline-block text-xs font-bold text-teal-700 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full border border-teal-200 mb-3">
+                        Got Questions?
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+                </div>
+
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="glass-card rounded-xl border border-teal-200 bg-white overflow-hidden shadow-sm">
+                        <button onclick="toggleUnysonFaq(1)" class="w-full px-6 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:bg-teal-50/60 transition-colors">
+                            <span>How does ConnectWeb Chat integrate with WordPress Unyson Page Builder?</span>
+                            <i id="unyson-faq-icon-1" class="fa-solid fa-chevron-down text-xs text-teal-600 transition-transform"></i>
+                        </button>
+                        <div id="unyson-faq-ans-1" class="hidden px-6 pb-4 text-xs text-slate-600 leading-relaxed border-t border-teal-50 pt-3">
+                            ConnectWeb Chat is completely scoped under independent CSS namespaces (`.unyson-webchat-landing`) and loads via an asynchronous tag. You can drop this entire code block into any Unyson HTML Block or Header/Footer script injection area without breaking active theme templates.
+                        </div>
+                    </div>
+
+
+                    <!-- FAQ 2 -->
+                    <div class="glass-card rounded-xl border border-teal-200 bg-white overflow-hidden shadow-sm">
+                        <button onclick="toggleUnysonFaq(2)" class="w-full px-6 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:bg-teal-50/60 transition-colors">
+                            <span>Can the hero video background be modified or replaced?</span>
+                            <i id="unyson-faq-icon-2" class="fa-solid fa-chevron-down text-xs text-teal-600 transition-transform"></i>
+                        </button>
+                        <div id="unyson-faq-ans-2" class="hidden px-6 pb-4 text-xs text-slate-600 leading-relaxed border-t border-teal-50 pt-3">
+                            Yes! The video is loaded through standard HTML5 &lt;video&gt; source tags targeting your PCS Connect media library. You can update the source URL at any time while retaining responsive aspect ratios and the white/blue-green gradient overlays.
+                        </div>
+                    </div>
+
+
+                    <!-- FAQ 3 -->
+                    <div class="glass-card rounded-xl border border-teal-200 bg-white overflow-hidden shadow-sm">
+                        <button onclick="toggleUnysonFaq(3)" class="w-full px-6 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:bg-teal-50/60 transition-colors">
+                            <span>Can I reply to customers using my phone?</span>
+                            <i id="unyson-faq-icon-3" class="fa-solid fa-chevron-down text-xs text-teal-600 transition-transform"></i>
+                        </button>
+                        <div id="unyson-faq-ans-3" class="hidden px-6 pb-4 text-xs text-slate-600 leading-relaxed border-t border-teal-50 pt-3">
+                            Yes! ConnectWeb Chat includes seamless SMS forwarding and mobile app access, enabling you to answer visitor questions directly from your phone from anywhere in the world.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             BOTTOM CTA BANNER
+             ========================================================================== -->
+        <section id="unyson-live-demo" class="unyson-section py-20 relative border-t border-teal-100 bg-white">
+            <div class="fw-container">
+                <div class="glass-card rounded-3xl p-10 sm:p-16 border border-emerald-300 bg-gradient-to-r from-teal-700 via-emerald-600 to-green-600 text-center relative overflow-hidden glow-effect text-white shadow-2xl">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">
+                        Ready to Convert Every Visitor Who Lands on Your Site?
+                    </h2>
+                    <p class="text-sm sm:text-base text-teal-100 max-w-2xl mx-auto mb-8 font-medium">
+                        Join over 10,000+ businesses using ConnectWeb Chat. 2-minute setup inside WordPress Unyson Page Builder.
+                    </p>
+
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                        <button onclick="toggleUnysonWidget(true)" class="px-8 py-4 text-sm font-bold text-teal-950 bg-white hover:bg-teal-50 rounded-xl shadow-xl shadow-teal-900/20 hover:scale-105 transition-all">
+                            Test Live ConnectWeb Chat Now
+                        </button>
+                    </div>
+
+
+                    <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-teal-100 font-semibold">
+                        <span><i class="fa-solid fa-check text-white mr-1.5"></i> 100% Unyson Builder Compatible</span>
+                        <span><i class="fa-solid fa-check text-white mr-1.5"></i> Free 14-day trial</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             FLOATING LIVE INTERACTIVE CHAT WIDGET
+             ========================================================================== -->
+        <div id="unyson-chat-widget-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+            <!-- Chat Box Window -->
+            <div id="unyson-chat-box" class="hidden w-[330px] sm:w-[360px] h-[480px] glass-card bg-white border border-teal-300 rounded-2xl shadow-2xl flex flex-col overflow-hidden mb-4 transition-all duration-300">
+                <!-- Widget Header -->
+                <div class="bg-gradient-to-r from-teal-600 via-emerald-600 to-green-600 p-4 text-white flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold text-xs">
+                                <i class="fa-solid fa-headset text-white"></i>
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-300 border-2 border-teal-600 rounded-full"></span>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold">ConnectWeb Chat Support</h4>
+                            <p class="text-[10px] text-teal-100">Typically replies in seconds</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleUnysonWidget(false)" class="text-white/80 hover:text-white p-1">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+
+
+                <!-- Chat Messages Feed -->
+                <div id="unyson-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs bg-gradient-to-b from-white to-teal-50/30">
+                    <div class="flex items-start space-x-2">
+                        <div class="w-6 h-6 rounded-full bg-teal-600 flex items-center justify-center text-[10px] shrink-0 mt-0.5 text-white shadow-sm">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="bg-white text-slate-800 p-3 rounded-2xl rounded-tl-none border border-teal-100 max-w-[85%] shadow-sm leading-relaxed">
+                            👋 Hi! ConnectWeb Chat is active with our fresh white, blue-green and green gradient theme. How can we help you today?
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Chat Message Form -->
+                <form onsubmit="handleUnysonChatSubmit(event)" class="p-3 border-t border-teal-100 bg-white flex items-center space-x-2">
+                    <input id="unyson-chat-input" type="text" placeholder="Type a message..." class="flex-1 bg-slate-50 border border-teal-200 rounded-xl px-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-teal-500 focus:bg-white">
+                    <button type="submit" class="w-8 h-8 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white rounded-xl flex items-center justify-center transition-colors shrink-0 shadow-sm">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+
+
+            <!-- Floating Toggle Button -->
+            <button id="unyson-chat-toggle-btn" onclick="toggleUnysonWidget()" class="w-14 h-14 bg-gradient-to-tr from-teal-600 via-emerald-500 to-green-500 hover:from-teal-500 hover:to-green-400 text-white rounded-full shadow-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 glow-effect">
+                <i id="unyson-chat-btn-icon" class="fa-solid fa-comment-dots"></i>
+            </button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        // Ensure background video plays smoothly
+        window.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('hero-background-video');
+            if (video) {
+                video.muted = true;
+                video.setAttribute('playsinline', '');
+                video.setAttribute('webkit-playsinline', '');
+               
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay paused by policy. User interaction will trigger play:", error);
+                    });
+                }
+            }
+        });
+
+
+        // Toggle Video Clarity / Vignette Density
+        let isMaxClarity = true;
+        function toggleVideoClarity() {
+            const video = document.getElementById('hero-background-video');
+            const overlayTint = document.getElementById('video-overlay-tint');
+            const overlaySide = document.getElementById('video-overlay-side');
+            const label = document.getElementById('clarity-label');
+            const btn = document.getElementById('video-clarity-btn');
+
+
+            isMaxClarity = !isMaxClarity;
+
+
+            if (isMaxClarity) {
+                overlayTint.style.opacity = '0.55';
+                overlaySide.style.opacity = '0.50';
+                video.style.filter = 'brightness(1.02) contrast(1.04) saturate(1.1)';
+                label.innerText = 'Vibrant View: ON';
+                btn.classList.add('bg-teal-50', 'border-teal-200');
+            } else {
+                overlayTint.style.opacity = '0.85';
+                overlaySide.style.opacity = '0.85';
+                video.style.filter = 'brightness(0.95) contrast(1.0)';
+                label.innerText = 'Soft White Focus';
+                btn.classList.remove('bg-teal-50', 'border-teal-200');
+            }
+        }
+
+
+        // Toggle Video Play / Pause
+        function toggleVideoPlayback() {
+            const video = document.getElementById('hero-background-video');
+            const btn = document.getElementById('video-play-btn');
+            if (!video) return;
+
+
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            } else {
+                video.pause();
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+        }
+
+
+        // Toggle Video Audio Mute / Unmute
+        function toggleVideoAudio() {
+            const video = document.getElementById('hero-background-video');
+            const btn = document.getElementById('video-mute-btn');
+            if (!video) return;
+
+
+            video.muted = !video.muted;
+            if (video.muted) {
+                btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-volume-high text-emerald-600"></i>';
+            }
+        }
+
+
+        // Toggle Floating Chat Widget Window
+        let isUnysonChatOpen = false;
+        function toggleUnysonWidget(forceState) {
+            const chatBox = document.getElementById('unyson-chat-box');
+            const btnIcon = document.getElementById('unyson-chat-btn-icon');
+           
+            if (typeof forceState === 'boolean') {
+                isUnysonChatOpen = forceState;
+            } else {
+                isUnysonChatOpen = !isUnysonChatOpen;
+            }
+
+
+            if (isUnysonChatOpen) {
+                chatBox.classList.remove('hidden');
+                btnIcon.className = 'fa-solid fa-xmark';
+            } else {
+                chatBox.classList.add('hidden');
+                btnIcon.className = 'fa-solid fa-comment-dots';
+            }
+        }
+
+
+        // Chat Form Submission
+        function handleUnysonChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('unyson-chat-input');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+
+            const messagesContainer = document.getElementById('unyson-chat-messages');
+
+
+            // Render User Message with Blue-green & Emerald Gradient
+            const userMsgHtml = `
+                <div class="flex items-start justify-end space-x-2">
+                    <div class="bg-gradient-to-r from-teal-600 to-emerald-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-sm leading-relaxed">
+                        ${escapeUnysonHtml(msg)}
+                    </div>
+                </div>
+            `;
+            messagesContainer.insertAdjacentHTML('beforeend', userMsgHtml);
+            input.value = '';
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+
+            // Simulate Automated Bot Response
+            setTimeout(() => {
+                const botMsgHtml = `
+                    <div class="flex items-start space-x-2">
+                        <div class="w-6 h-6 rounded-full bg-teal-600 flex items-center justify-center text-[10px] shrink-0 mt-0.5 text-white shadow-sm">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="bg-white text-slate-800 p-3 rounded-2xl rounded-tl-none border border-teal-100 max-w-[85%] shadow-sm leading-relaxed">
+                            Thanks for checking out ConnectWeb Chat! All sections now use the white, blue-green, and green gradient design system.
+                        </div>
+                    </div>
+                `;
+                messagesContainer.insertAdjacentHTML('beforeend', botMsgHtml);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 700);
+        }
+
+
+        function escapeUnysonHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+
+        // Tab Switching Logic for Use Cases
+        function switchUnysonTab(tabKey) {
+            document.querySelectorAll('.unyson-tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.unyson-usecase-tab').forEach(el => {
+                el.classList.remove('bg-gradient-to-r', 'from-teal-600', 'to-emerald-600', 'text-white', 'shadow-md', 'font-bold');
+                el.classList.add('text-slate-600', 'font-semibold');
+            });
+
+
+            document.getElementById(`unyson-tab-${tabKey}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`unyson-tab-btn-${tabKey}`);
+            activeBtn.classList.add('bg-gradient-to-r', 'from-teal-600', 'to-emerald-600', 'text-white', 'shadow-md', 'font-bold');
+            activeBtn.classList.remove('text-slate-600');
+        }
+
+
+        // FAQ Toggle Logic
+        function toggleUnysonFaq(index) {
+            const ans = document.getElementById(`unyson-faq-ans-${index}`);
+            const icon = document.getElementById(`unyson-faq-icon-${index}`);
+           
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

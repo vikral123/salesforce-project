@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Excel Upload">
+
+    <lightning-input
+    type="file"
+    accept=".xlsx,.xls,.csv,.pdf"
+    onchange={handleFile}>
+</lightning-input>
+
+        <lightning-button
+            label="Submit"
+            onclick={handleSubmit}
+            class="slds-m-top_medium">
+        </lightning-button>
+
+        <!-- Excel data display component -->
+        <c-excel-display excel-data={excelData}></c-excel-display>
+
+    </lightning-card>
+</template>

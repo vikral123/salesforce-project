@@ -1,0 +1,198 @@
+<template>
+
+    <lightning-card title="PDF Text Extractor" icon-name="doctype:pdf">
+
+
+        <div class="slds-p-around_medium">
+
+
+            <!-- File Upload -->
+            <lightning-input
+                type="file"
+                label="Select PDF File"
+                accept=".pdf"
+                onchange={handleFileChange}>
+            </lightning-input>
+
+
+
+            <template if:true={fileName}>
+
+                <div class="file-name">
+
+                    Selected File:
+                    <strong>{fileName}</strong>
+
+                </div>
+
+            </template>
+
+
+
+            <!-- Upload Button -->
+            <div class="button-area">
+
+
+                <lightning-button
+                    variant="brand"
+                    label="Extract PDF Text"
+                    onclick={handleUpload}
+                    disabled={isLoading}>
+                </lightning-button>
+
+
+            </div>
+
+
+
+            <!-- Progress -->
+            <template if:true={isLoading}>
+
+
+                <div class="progress-container">
+
+
+                    <lightning-progress-bar
+                        value={progress}
+                        size="large">
+                    </lightning-progress-bar>
+
+
+
+                    <p class="progress-text">
+
+                        {progressLabel}
+
+                    </p>
+
+
+                </div>
+
+
+            </template>
+
+
+
+
+            <!-- PDF Information -->
+
+            <template if:true={totalRecords}>
+
+
+                <div class="info-box">
+
+
+                    <p>
+                        Total Pages:
+                        <strong>
+                            {totalPages}
+                        </strong>
+                    </p>
+
+
+
+                    <p>
+                        Extracted Pages:
+                        <strong>
+                            {totalRecords}
+                        </strong>
+                    </p>
+
+
+
+                    <p>
+                        Current Page:
+                        <strong>
+                            {currentPage}
+                            /
+                            {totalPagesCount}
+                        </strong>
+                    </p>
+
+
+
+                </div>
+
+
+            </template>
+
+
+
+
+
+            <!-- Data Preview -->
+
+            <template if:true={displayedData.length}>
+
+
+                <div class="table-container">
+
+
+                    <lightning-datatable
+
+                        key-field="id"
+
+                        data={displayedData}
+
+                        columns={columns}
+
+                        hide-checkbox-column>
+
+                    </lightning-datatable>
+
+
+                </div>
+
+
+            </template>
+
+
+
+
+            <!-- Pagination -->
+
+            <template if:true={totalRecords}>
+
+
+                <div class="pagination">
+
+
+                    <lightning-button
+
+                        label="Previous"
+
+                        onclick={handlePrevious}
+
+                        disabled={disablePrevious}>
+
+                    </lightning-button>
+
+
+
+
+                    <lightning-button
+
+                        label="Next"
+
+                        onclick={handleNext}
+
+                        disabled={disableNext}>
+
+                    </lightning-button>
+
+
+                </div>
+
+
+            </template>
+
+
+
+
+        </div>
+
+
+    </lightning-card>
+
+
+</template>

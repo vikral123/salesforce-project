@@ -1,0 +1,107 @@
+.container {
+    max-width: 100%;
+}
+
+/* ---------- Drop zone ---------- */
+.drop-zone {
+    border: 2px dashed #c9c9c9;
+    border-radius: 0.5rem;
+    background-color: #fafafa;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.drop-zone_active {
+    border-color: #1589ee;
+    background-color: #eef6fd;
+}
+
+.drop-zone-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #16325c;
+    margin-bottom: 0.25rem;
+}
+
+.drop-zone-subtext {
+    color: #706e6b;
+    margin-bottom: 0.75rem;
+    font-size: 0.8125rem;
+}
+
+.drop-zone-hint {
+    margin-top: 0.75rem;
+    color: #706e6b;
+    font-size: 0.75rem;
+}
+
+.file-input {
+    display: none;
+}
+
+/* ---------- File details ---------- */
+.file-details {
+    background-color: #ffffff;
+}
+
+.file-name {
+    font-size: 0.9375rem;
+    word-break: break-all;
+}
+
+.file-meta {
+    color: #706e6b;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+}
+
+/* ---------- Buttons ---------- */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---------- Progress ---------- */
+.progress-container {
+    min-height: 4rem;
+}
+
+.progress-text {
+    text-align: center;
+    color: #706e6b;
+    font-size: 0.8125rem;
+}
+
+/* ---------- Results ---------- */
+.results-header {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+}
+
+.extracted-text-container {
+    max-height: 60vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.extracted-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+    .drop-zone {
+        padding: 1.5rem 1rem;
+    }
+
+    .button-row lightning-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

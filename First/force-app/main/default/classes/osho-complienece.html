@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Safety Training | PCS Workplace Safety</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        :root {
+            --pcs-blue: #0d3157;
+            --pcs-dark-blue: #082744;
+            --pcs-light-blue: #edf6fc;
+            --pcs-orange: #f4511e;
+            --pcs-orange-light: #ff6a35;
+            --pcs-gray: #65768b;
+            --pcs-border: #dce6ee;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            color: var(--pcs-blue);
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .pcs-header {
+            height: 84px;
+            background: #fff;
+            border-bottom: 1px solid #edf1f4;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .pcs-logo {
+            width: 165px;
+            height: auto;
+        }
+
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 34px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #173653 !important;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 0 !important;
+            position: relative;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--pcs-orange) !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--pcs-orange) !important;
+        }
+
+        .navbar-nav .nav-link.active:after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            width: 31px;
+            height: 2px;
+            background: var(--pcs-orange);
+        }
+
+        .header-btn {
+            background: var(--pcs-orange);
+            color: #fff !important;
+            padding: 13px 23px !important;
+            border-radius: 30px;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            margin-left: 35px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            transition: .3s;
+        }
+
+        .header-btn:hover {
+            background: #d93f12;
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            position: relative;
+            min-height: 485px;
+            overflow: hidden;
+            background: #edf6fb;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            padding: 72px 0 70px;
+        }
+
+        .hero-copy {
+            width: 52%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pcs-blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero-label i {
+            color: var(--pcs-orange);
+            font-size: 10px;
+        }
+
+        .hero-label span {
+            width: 30px;
+            height: 2px;
+            background: var(--pcs-blue);
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -1.6px;
+            margin-bottom: 18px;
+            color: var(--pcs-blue);
+        }
+
+        .hero h1 .orange {
+            color: var(--pcs-orange);
+        }
+
+        .hero-description {
+            max-width: 520px;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #25486b;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .hero-small-text {
+            max-width: 530px;
+            color: #60758c;
+            font-size: 13.5px;
+            line-height: 1.7;
+            margin-bottom: 23px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-pcs {
+            background: var(--pcs-orange);
+            color: #fff;
+            border: 2px solid var(--pcs-orange);
+            border-radius: 28px;
+            padding: 12px 21px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .btn-pcs:hover {
+            background: #d94313;
+            border-color: #d94313;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-pcs {
+            color: var(--pcs-blue);
+            background: #fff;
+            border: 1px solid #2b638e;
+            border-radius: 28px;
+            padding: 12px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-pcs:hover {
+            background: var(--pcs-blue);
+            color: #fff;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 57%;
+            height: 100%;
+            background:
+                linear-gradient(90deg,
+                    rgba(237,246,251,1) 0%,
+                    rgba(237,246,251,.75) 8%,
+                    rgba(237,246,251,0) 25%),
+                url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=85")
+                center center / cover no-repeat;
+        }
+
+        .hero-image:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 250px;
+            height: 76px;
+            background: var(--pcs-blue);
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .hero-image-label {
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            bottom: 0;
+            width: 215px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 700;
+            padding-left: 25px;
+        }
+
+        .hero-image-label i {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+
+        /* =========================================
+           SECTION COMMON
+        ========================================= */
+
+        .section {
+            padding: 31px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 37px;
+        }
+
+        .section-heading h2 {
+            font-size: 29px;
+            font-weight: 800;
+            color: var(--pcs-blue);
+            margin-bottom: 9px;
+            letter-spacing: -.7px;
+        }
+
+        .section-heading h2 span {
+            color: var(--pcs-orange);
+        }
+
+        .section-heading p {
+            color: #718297;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           TRAINING CARDS
+        ========================================= */
+
+        .training-card {
+            height: 100%;
+            min-height: 218px;
+            border: 1px solid var(--pcs-border);
+            border-radius: 5px;
+            padding: 26px 19px 23px;
+            background: #fff;
+            transition: .3s;
+        }
+
+        .training-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(10, 49, 87, .10);
+            border-color: #c9dbe8;
+        }
+
+        .training-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #fff;
+            font-size: 19px;
+        }
+
+        .training-icon.orange {
+            background: var(--pcs-orange);
+        }
+
+        .training-icon.blue {
+            background: #0b67bb;
+        }
+
+        .training-card h3 {
+            color: var(--pcs-blue);
+            font-size: 15px;
+            line-height: 1.3;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .training-card p {
+            color: #61758d;
+            font-size: 12.5px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .training-grid {
+            margin-bottom: 17px;
+        }
+
+
+        /* =========================================
+           MINDSET CARD
+        ========================================= */
+
+        .mindset-card {
+            min-height: 204px;
+            height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(90deg, rgba(237,246,251,.98) 0%, rgba(237,246,251,.95) 40%, rgba(237,246,251,.25) 100%),
+                url("https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+            padding: 48px 30px;
+        }
+
+        .mindset-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--pcs-blue);
+            margin-bottom: 4px;
+        }
+
+        .mindset-card h3 span {
+            color: var(--pcs-orange);
+        }
+
+        .mindset-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #355675;
+            max-width: 240px;
+            margin-bottom: 15px;
+        }
+
+        .orange-line {
+            width: 38px;
+            height: 2px;
+            background: var(--pcs-orange);
+        }
+
+
+        /* =========================================
+           WHY SECTION
+        ========================================= */
+
+        .why-section {
+            background: #f2f8fc;
+            padding: 62px 0;
+        }
+
+        .why-image-wrap {
+            height: 258px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .why-image-wrap:after {
+            content: "";
+            position: absolute;
+            right: -1px;
+            top: 0;
+            height: 100%;
+            width: 80px;
+            background: #f2f8fc;
+            clip-path: polygon(75% 0,100% 0,100% 100%,0 100%);
+        }
+
+        .why-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-content {
+            padding: 3px 10px 0 20px;
+        }
+
+        .why-content h2 {
+            font-size: 25px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: var(--pcs-blue);
+            margin-bottom: 13px;
+        }
+
+        .why-content h2 span {
+            color: var(--pcs-orange);
+        }
+
+        .why-content p {
+            color: #5d7289;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 17px;
+        }
+
+        .benefits {
+            display: flex;
+            gap: 22px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: #385875;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .benefit i {
+            color: #0b5b9e;
+            font-size: 19px;
+        }
+
+
+        /* =========================================
+           RESOURCE BOX
+        ========================================= */
+
+        .resource-box {
+            background: #f7fbfe;
+            border: 1px solid #dce7ef;
+            border-radius: 5px;
+            padding: 20px 18px;
+        }
+
+        .resource-box h3 {
+            font-size: 16px;
+            color: var(--pcs-blue);
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .resource-box h3 i {
+            float: right;
+            font-size: 12px;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            color: #0866b3;
+            font-size: 11.5px;
+            line-height: 1.4;
+            margin-bottom: 13px;
+            transition: .2s;
+        }
+
+        .resource-link:last-child {
+            margin-bottom: 0;
+        }
+
+        .resource-link i {
+            color: var(--pcs-orange);
+            margin-right: 10px;
+            font-size: 9px;
+        }
+
+        .resource-link:hover {
+            color: var(--pcs-orange);
+        }
+
+
+        /* =========================================
+           CONTENT SECTIONS
+        ========================================= */
+
+        .content-section {
+            padding: 22px 0;
+        }
+
+        .content-image {
+            height: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-text {
+            padding: 12px 15px;
+        }
+
+        .content-text .mini-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: var(--pcs-orange);
+            font-weight: 800;
+            margin-bottom: 9px;
+        }
+
+        .content-text h2 {
+            color: var(--pcs-blue);
+            font-size: 27px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .content-text p {
+            color: #64788e;
+            font-size: 13.5px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta-section {
+            background:
+                linear-gradient(90deg, rgba(7,42,72,.97), rgba(10,54,91,.90)),
+                url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1600&q=80")
+                center / cover;
+            padding: 31px 0;
+            color: #fff;
+        }
+
+        .cta-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta-left {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .cta-icon {
+            width: 47px;
+            height: 47px;
+            border: 2px solid #fff;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .cta-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .cta-middle {
+            font-size: 11px;
+            line-height: 1.55;
+            max-width: 310px;
+            color: #d9e7f1;
+        }
+
+        .cta-button {
+            background: var(--pcs-orange);
+            color: #fff;
+            border-radius: 25px;
+            padding: 12px 22px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            color: #fff;
+            background: #dc4215;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+            background: #fff;
+            padding: 22px 0 15px;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e3eaf0;
+        }
+
+        .footer-logo {
+            width: 145px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        .footer-nav a {
+            font-size: 10px;
+            color: #385875;
+        }
+
+        .footer-nav a:hover {
+            color: var(--pcs-orange);
+        }
+
+        .socials {
+            display: flex;
+            gap: 9px;
+        }
+
+        .socials a {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--pcs-blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            transition: .3s;
+        }
+
+        .socials a:hover {
+            background: var(--pcs-orange);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 13px;
+        }
+
+        .footer-bottom p {
+            color: #8190a0;
+            font-size: 9px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           MOBILE NAVIGATION
+        ========================================= */
+
+        .navbar-toggler {
+            border: none;
+            padding: 5px;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            width: 25px;
+            height: 20px;
+            position: relative;
+            background-image: none !important;
+        }
+
+        .navbar-toggler-icon:before,
+        .navbar-toggler-icon:after,
+        .navbar-toggler-icon {
+            background: transparent;
+        }
+
+        .navbar-toggler-icon:before {
+            content: "\f0c9";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 25px;
+            color: var(--pcs-blue);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1199px) {
+
+            .container {
+                max-width: 94%;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero-image {
+                width: 58%;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 22px;
+            }
+
+        }
+
+
+        @media (max-width: 991px) {
+
+            .pcs-header {
+                height: auto;
+                min-height: 76px;
+            }
+
+            .navbar {
+                padding: 13px 0;
+            }
+
+            .navbar-collapse {
+                background: #fff;
+                margin-top: 14px;
+                padding: 12px 0 15px;
+                border-top: 1px solid #eee;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 0;
+                margin-bottom: 3px;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 9px 10px !important;
+            }
+
+            .navbar-nav .nav-link.active:after {
+                display: none;
+            }
+
+            .header-btn {
+                margin-left: 10px;
+                margin-top: 8px;
+                display: inline-flex;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 60px 0;
+            }
+
+            .hero-copy {
+                width: 55%;
+            }
+
+            .hero-image {
+                width: 55%;
+                opacity: .9;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .mindset-card {
+                margin-top: 18px;
+            }
+
+            .benefits {
+                gap: 12px;
+            }
+
+            .cta-flex {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .pcs-logo {
+                width: 145px;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 290px;
+                opacity: 1;
+                background:
+                    linear-gradient(180deg,
+                        rgba(237,246,251,.1),
+                        rgba(237,246,251,.0)),
+                    url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85")
+                    center / cover;
+            }
+
+            .hero-image:after {
+                width: 190px;
+                height: 60px;
+            }
+
+            .hero-image-label {
+                width: 175px;
+                height: 60px;
+                font-size: 11px;
+            }
+
+            .hero-content {
+                padding: 48px 0 35px;
+            }
+
+            .hero-copy {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                max-width: 100%;
+            }
+
+            .hero-small-text {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                flex-wrap: wrap;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+
+            .training-card {
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+
+            .mindset-card {
+                min-height: 240px;
+            }
+
+            .why-section {
+                padding: 50px 0;
+            }
+
+            .why-image-wrap {
+                height: 240px;
+                margin-bottom: 25px;
+            }
+
+            .why-content {
+                padding: 0;
+            }
+
+            .why-content h2 {
+                font-size: 24px;
+            }
+
+            .benefits {
+                flex-wrap: wrap;
+            }
+
+            .benefit {
+                width: 45%;
+            }
+
+            .resource-box {
+                margin-top: 25px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+
+            .content-image {
+                height: 250px;
+                margin-bottom: 25px;
+            }
+
+            .content-text {
+                padding: 0;
+            }
+
+            .cta-flex {
+                display: block;
+            }
+
+            .cta-left {
+                margin-bottom: 17px;
+            }
+
+            .cta-middle {
+                margin-bottom: 18px;
+            }
+
+            .footer-top {
+                display: block;
+            }
+
+            .footer-logo {
+                margin-bottom: 20px;
+            }
+
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 18px;
+            }
+
+            .footer-bottom {
+                display: block;
+            }
+
+            .footer-bottom p {
+                margin-bottom: 6px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-heading h2 {
+                font-size: 23px;
+            }
+
+            .benefit {
+                width: 100%;
+            }
+
+            .cta-title {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="pcs-header">
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" href="#">
+                <!-- YOUR PCS LOGO -->
+                <img
+                    src="cropped-pcs-logo (1).webp"
+                    alt="PCS Workplace Safety"
+                    class="pcs-logo">
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#pcsNavigation"
+                aria-controls="pcsNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="pcsNavigation">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">
+                            Training Programs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why">
+                            Why PCS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="#contact" class="header-btn">
+                            Get a Quote
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="container">
+
+            <div class="hero-copy">
+
+                <div class="hero-label">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                    <strong>Safety Training</strong>
+
+                    <span></span>
+
+                </div>
+
+
+                <h1>
+                    Safer People.<br>
+
+                    <span class="orange">
+                        Stronger Operations.
+                    </span>
+                </h1>
+
+
+                <p class="hero-description">
+                    PCS Safety delivers tailored safety training programs
+                    designed specifically for manufacturing environments.
+                </p>
+
+
+                <p class="hero-small-text">
+                    Our goal is to help you protect workers on the production
+                    floor through proactive education, hands-on coaching,
+                    and practical strategies that integrate seamlessly
+                    into daily operations.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#training" class="btn-pcs">
+
+                        Explore Training Programs
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#contact" class="btn-outline-pcs">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="hero-image-label">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>
+                Training for a<br>
+                Safer Tomorrow
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TRAINING PROGRAMS
+========================================= -->
+
+<section class="section" id="training">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Here's What
+                <span>PCS Safety</span>
+                Covers
+            </h2>
+
+            <p>
+                PCS Safety can tailor training around the hazards and workflows
+                specific to your facility.
+            </p>
+
+        </div>
+
+
+        <div class="row training-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon orange">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <h3>
+                        Lockout/Tagout &amp;<br>
+                        Machine Safety
+                    </h3>
+
+                    <p>
+                        Understand safe lockout/tagout procedures,
+                        machine guarding expectations, and how to
+                        reduce the risk of serious injuries.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon blue">
+
+                        <i class="fa-solid fa-person"></i>
+
+                    </div>
+
+                    <h3>
+                        Ergonomics Training
+                    </h3>
+
+                    <p>
+                        Recognize risk factors like repetitive motion,
+                        lifting and awkward postures. Apply safer
+                        work practices for long-term injury prevention.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon orange">
+
+                        <i class="fa-solid fa-comment-medical"></i>
+
+                    </div>
+
+                    <h3>
+                        Hazard Communication
+                        &amp; SDS Awareness
+                    </h3>
+
+                    <p>
+                        Identify chemical hazards, read labels,
+                        and access Safety Data Sheets. Reinforce
+                        labeling and handling requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon blue">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                    </div>
+
+                    <h3>
+                        Shift-Based
+                        Toolbox Talks
+                    </h3>
+
+                    <p>
+                        Short, targeted talks keep safety top of
+                        mind across all shifts with key hazards,
+                        safe practices and current expectations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+
+            <!-- CARD 5 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon blue">
+
+                        <i class="fa-solid fa-person-chalkboard"></i>
+
+                    </div>
+
+                    <h3>
+                        On-the-Floor
+                        Safety Coaching
+                    </h3>
+
+                    <p>
+                        Practical coaching directly in your operations
+                        supports real behavior change and helps teams
+                        apply training during daily production.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 6 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="training-card">
+
+                    <div class="training-icon orange">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+                    <h3>
+                        Incident Prevention &amp;
+                        Hazard Recognition
+                    </h3>
+
+                    <p>
+                        Teach employees to spot unsafe conditions early,
+                        communicate risks and take corrective action
+                        before injuries occur.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MINDSET CARD -->
+
+            <div class="col-lg-6 col-md-12">
+
+                <div class="mindset-card">
+
+                    <h3>
+                        Safety isn't just a program.
+                    </h3>
+
+                    <h3>
+                        <span>It's a mindset.</span>
+                    </h3>
+
+                    <p>
+                        Real training. Real people.
+                        Safer manufacturing.
+                    </p>
+
+                    <div class="orange-line"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHY MANUFACTURING SAFETY
+========================================= -->
+
+<section class="why-section" id="why">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <!-- IMAGE -->
+
+            <div class="col-lg-3 col-md-5">
+
+                <div class="why-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=85"
+                        alt="Lockout Tagout Manufacturing"
+                        class="why-image">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="col-lg-5 col-md-7">
+
+                <div class="why-content">
+
+                    <h2>
+                        Why Manufacturing Safety
+                        <br>
+                        Training
+                        <span>Matters</span>
+                    </h2>
+
+
+                    <p>
+                        Manufacturing environments often involve moving
+                        equipment, stored energy, chemical exposure,
+                        material handling, and repetitive motion.
+                        Effective training helps employees understand
+                        these risks and apply safe procedures consistently
+                        during routine tasks, changeovers, maintenance work,
+                        and daily production activities.
+                    </p>
+
+
+                    <div class="benefits">
+
+                        <div class="benefit">
+
+                            <i class="fa-regular fa-circle-check"></i>
+
+                            <span>
+                                Reduce Injuries<br>
+                                &amp; Downtime
+                            </span>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <i class="fa-solid fa-clipboard-check"></i>
+
+                            <span>
+                                Stay Compliant<br>
+                                with Regulations
+                            </span>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                            <span>
+                                Build a Stronger,<br>
+                                Safer Team
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="col-lg-4">
+
+                <div class="resource-box">
+
+                    <h3>
+                        Related Resources
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h3>
+
+
+                    <a href="#" class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        OSHA Compliance Training
+
+                    </a>
+
+
+                    <a href="#" class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Safety Management Programs
+
+                    </a>
+
+
+                    <a href="#" class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        OSHA Manufacturing Industry Standards
+
+                    </a>
+
+
+                    <a href="#" class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        OSHA Lockout/Tagout Requirements
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LOCKOUT / TAGOUT
+========================================= -->
+
+<section class="content-section" id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+
+                <div class="content-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85"
+                        alt="Manufacturing Safety Training">
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="content-text">
+
+                    <div class="mini-label">
+                        Manufacturing Safety
+                    </div>
+
+                    <h2>
+                        Lockout/Tagout and
+                        Machine Safety Training
+                    </h2>
+
+                    <p>
+                        Manufacturing equipment can expose employees
+                        to moving parts and hazardous stored energy
+                        during servicing, setup, and maintenance.
+                        Training should help workers understand safe
+                        lockout/tagout procedures, machine guarding
+                        expectations, and the steps needed to reduce
+                        the risk of serious injuries.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ERGONOMICS
+========================================= -->
+
+<section class="content-section" style="background:#f7fafc;">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6 order-lg-2">
+
+                <div class="content-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+                        alt="Ergonomics Training">
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 order-lg-1">
+
+                <div class="content-text">
+
+                    <div class="mini-label">
+                        Injury Prevention
+                    </div>
+
+                    <h2>
+                        Ergonomics Training and
+                        Injury Prevention
+                    </h2>
+
+                    <p>
+                        Repetitive motion, lifting, awkward postures,
+                        and forceful tasks can all contribute to workplace
+                        injuries in manufacturing settings. Therefore,
+                        ergonomics training helps employees recognize
+                        risk factors and apply safer work practices that
+                        support long-term injury prevention.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     HAZARD COMMUNICATION
+========================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <div class="content-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Hazard Communication Training">
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="content-text">
+
+                    <div class="mini-label">
+                        Chemical Safety
+                    </div>
+
+                    <h2>
+                        Hazard Communication Training
+                        &amp; SDS Awareness
+                    </h2>
+
+                    <p>
+                        Employees should know how to identify chemical
+                        hazards, read labels, and access Safety Data Sheets
+                        relevant to their work area. This training supports
+                        safer chemical handling and reinforces hazard
+                        communication practices across the facility.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta-section" id="contact">
+
+    <div class="container">
+
+        <div class="cta-flex">
+
+
+            <div class="cta-left">
+
+                <div class="cta-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="cta-title">
+
+                    Invest in Safety.<br>
+                    Build a Stronger Future.
+
+                </div>
+
+            </div>
+
+
+            <div class="cta-middle">
+
+                Let's create a safer, more productive workplace
+                together with customized training solutions
+                for your manufacturing team.
+
+            </div>
+
+
+            <a href="#" class="cta-button">
+
+                Get Started
+
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <img
+                src="cropped-pcs-logo (1).webp"
+                alt="PCS Workplace Safety"
+                class="footer-logo">
+
+
+            <div class="footer-nav">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#training">
+                    Training Programs
+                </a>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#why">
+                    Why PCS
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2025 PCS Safety. All rights reserved.
+            </p>
+
+            <p>
+                Safety Today. A Stronger Tomorrow.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

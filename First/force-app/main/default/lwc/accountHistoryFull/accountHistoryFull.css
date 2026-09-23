@@ -1,0 +1,110 @@
+.history-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.history-header,
+.history-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 0.8fr;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+
+.history-header {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #444444;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #d8dde6;
+    border-radius: 4px 4px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.history-row {
+    font-size: 0.85rem;
+    color: #181818;
+    border-bottom: 1px solid #ecebea;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.history-row:hover {
+    background-color: #f8f9fb;
+}
+
+.history-row:last-of-type {
+    border-bottom: none;
+}
+
+.account-name {
+    font-weight: 600;
+    color: #014486;
+}
+
+.field-name {
+    color: #3e3e3c;
+}
+
+.old-value {
+    color: #c23934;
+    text-decoration: line-through;
+    text-decoration-color: #eab3af;
+}
+
+.new-value {
+    color: #04844b;
+    font-weight: 500;
+}
+
+.changed-by {
+    color: #3e3e3c;
+}
+
+.date {
+    color: #706e6b;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.no-records {
+    text-align: center;
+    padding: 2rem 0;
+    color: #706e6b;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .history-header {
+        display: none;
+    }
+
+    .history-row {
+        grid-template-columns: 1fr;
+        row-gap: 0.25rem;
+        border: 1px solid #ecebea;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .account-name::before   { content: "Account: "; font-weight: 700; color: #706e6b; }
+    .field-name::before     { content: "Field: "; font-weight: 700; color: #706e6b; }
+    .old-value::before      { content: "Old: "; font-weight: 700; color: #706e6b; }
+    .new-value::before      { content: "New: "; font-weight: 700; color: #706e6b; }
+    .changed-by::before     { content: "Changed By: "; font-weight: 700; color: #706e6b; }
+    .date::before           { content: "Date: "; font-weight: 700; color: #706e6b; }
+}

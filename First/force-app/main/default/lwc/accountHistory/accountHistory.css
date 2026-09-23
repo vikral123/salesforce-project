@@ -1,0 +1,212 @@
+.history-container {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+/* Header */
+
+.history-header {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1.3fr
+        1.3fr
+        1.2fr
+        1.2fr;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    background: #f3f3f3;
+
+    border-bottom: 1px solid #d8dde6;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #444;
+}
+
+
+/* History row */
+
+.history-row {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1.3fr
+        1.3fr
+        1.2fr
+        1.2fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 13px;
+
+    color: #181818;
+
+    min-height: 48px;
+}
+
+
+/* Hover */
+
+.history-row:hover {
+    background: #f8f9fb;
+}
+
+
+/* Account */
+
+.account-name {
+    color: #032d60;
+
+    font-weight: 600;
+}
+
+
+/* Field */
+
+.field-name {
+    color: #181818;
+
+    font-weight: 500;
+}
+
+
+/* Old value */
+
+.old-value {
+    color: #ba0517;
+
+    word-break: break-word;
+}
+
+
+/* New value */
+
+.new-value {
+    color: #2e844a;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* Changed By */
+
+.changed-by {
+    color: #444;
+}
+
+
+/* Date */
+
+.date {
+    color: #706e6b;
+}
+
+
+/* View More */
+
+.view-more-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* No records */
+
+.no-records {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #706e6b;
+
+    font-size: 14px;
+}
+
+
+/* Loading */
+
+.loading-container {
+    position: relative;
+
+    min-height: 80px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+
+    .history-header,
+    .history-row {
+
+        grid-template-columns:
+            1.3fr
+            1fr
+            1.2fr
+            1.2fr;
+
+    }
+
+    .history-header div:nth-child(5),
+    .history-header div:nth-child(6),
+
+    .history-row > div:nth-child(5),
+    .history-row > div:nth-child(6) {
+
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .history-header,
+    .history-row {
+
+        grid-template-columns:
+            1fr
+            1fr
+            1fr
+            1fr;
+
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .history-row {
+
+        font-size: 12px;
+    }
+}

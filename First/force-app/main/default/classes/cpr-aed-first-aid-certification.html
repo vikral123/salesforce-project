@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CPR, AED &amp; First Aid Certification | PCS Safety</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        :root {
+            --pcs-blue: #0d3157;
+            --pcs-dark-blue: #082744;
+            --pcs-light-blue: #edf6fc;
+            --pcs-orange: #f4511e;
+            --pcs-orange-light: #ff6a35;
+            --pcs-gray: #65768b;
+            --pcs-border: #dce6ee;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            color: var(--pcs-blue);
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .pcs-header {
+            height: 84px;
+            background: #fff;
+            border-bottom: 1px solid #edf1f4;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .pcs-logo {
+            width: 165px;
+            height: auto;
+        }
+
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 34px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #173653 !important;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 0 !important;
+            position: relative;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--pcs-orange) !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--pcs-orange) !important;
+        }
+
+        .navbar-nav .nav-link.active:after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            width: 31px;
+            height: 2px;
+            background: var(--pcs-orange);
+        }
+
+        .header-btn {
+            background: var(--pcs-orange);
+            color: #fff !important;
+            padding: 13px 23px !important;
+            border-radius: 30px;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            margin-left: 35px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            transition: .3s;
+        }
+
+        .header-btn:hover {
+            background: #d93f12;
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            position: relative;
+            min-height: 485px;
+            overflow: hidden;
+            background: #edf6fb;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            padding: 72px 0 70px;
+        }
+
+        .hero-copy {
+            width: 52%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pcs-blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero-label i {
+            color: var(--pcs-orange);
+            font-size: 10px;
+        }
+
+        .hero-label span {
+            width: 30px;
+            height: 2px;
+            background: var(--pcs-blue);
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -1.6px;
+            margin-bottom: 18px;
+            color: var(--pcs-blue);
+        }
+
+        .hero h1 .orange {
+            color: var(--pcs-orange);
+        }
+
+        .hero-description {
+            max-width: 520px;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #25486b;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .hero-small-text {
+            max-width: 530px;
+            color: #60758c;
+            font-size: 13.5px;
+            line-height: 1.7;
+            margin-bottom: 23px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-pcs {
+            background: var(--pcs-orange);
+            color: #fff;
+            border: 2px solid var(--pcs-orange);
+            border-radius: 28px;
+            padding: 12px 21px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .btn-pcs:hover {
+            background: #d94313;
+            border-color: #d94313;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-pcs {
+            color: var(--pcs-blue);
+            background: #fff;
+            border: 1px solid #2b638e;
+            border-radius: 28px;
+            padding: 12px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-pcs:hover {
+            background: var(--pcs-blue);
+            color: #fff;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 57%;
+            height: 100%;
+            background:
+                linear-gradient(90deg,
+                    rgba(237,246,251,1) 0%,
+                    rgba(237,246,251,.75) 8%,
+                    rgba(237,246,251,0) 25%),
+                url("https://www.pcs-safety.com/wp-content/uploads/2026/04/PCS-Pictures-768x432.png")
+                center center / cover no-repeat;
+        }
+
+        .hero-image:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 250px;
+            height: 76px;
+            background: var(--pcs-blue);
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .hero-image-label {
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            bottom: 0;
+            width: 215px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 700;
+            padding-left: 25px;
+        }
+
+        .hero-image-label i {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+
+        /* =========================================
+           SECTION COMMON
+        ========================================= */
+
+        .section {
+            padding: 31px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 37px;
+        }
+
+        .section-heading h2 {
+            font-size: 29px;
+            font-weight: 800;
+            color: var(--pcs-blue);
+            margin-bottom: 9px;
+            letter-spacing: -.7px;
+        }
+
+        .section-heading h2 span {
+            color: var(--pcs-orange);
+        }
+
+        .section-heading p {
+            color: #718297;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           TRAINING CARDS
+        ========================================= */
+
+        .training-card {
+            height: 100%;
+            min-height: 218px;
+            border: 1px solid var(--pcs-border);
+            border-radius: 5px;
+            padding: 26px 19px 23px;
+            background: #fff;
+            transition: .3s;
+        }
+
+        .training-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(10, 49, 87, .10);
+            border-color: #c9dbe8;
+        }
+
+        .training-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #fff;
+            font-size: 19px;
+        }
+
+        .training-icon.orange {
+            background: var(--pcs-orange);
+        }
+
+        .training-icon.blue {
+            background: #0b67bb;
+        }
+
+        .training-card h3 {
+            color: var(--pcs-blue);
+            font-size: 15px;
+            line-height: 1.3;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .training-card p {
+            color: #61758d;
+            font-size: 12.5px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .training-grid {
+            margin-bottom: 17px;
+        }
+
+
+        /* =========================================
+           MINDSET CARD
+        ========================================= */
+
+        .mindset-card {
+            min-height: 204px;
+            height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(90deg, rgba(237,246,251,.98) 0%, rgba(237,246,251,.95) 40%, rgba(237,246,251,.25) 100%),
+                url("https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+            padding: 48px 30px;
+        }
+
+        .mindset-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--pcs-blue);
+            margin-bottom: 4px;
+        }
+
+        .mindset-card h3 span {
+            color: var(--pcs-orange);
+        }
+
+        .mindset-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #355675;
+            max-width: 240px;
+            margin-bottom: 15px;
+        }
+
+        .orange-line {
+            width: 38px;
+            height: 2px;
+            background: var(--pcs-orange);
+        }
+
+
+        /* =========================================
+           WHY SECTION
+        ========================================= */
+
+        .why-section {
+            background: #f2f8fc;
+            padding: 4px 0;
+        }
+
+        .why-image-wrap {
+            height: 258px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .why-image-wrap:after {
+            content: "";
+            position: absolute;
+            right: -1px;
+            top: 0;
+            height: 100%;
+            width: 80px;
+            background: #f2f8fc;
+            clip-path: polygon(75% 0,100% 0,100% 100%,0 100%);
+        }
+
+        .why-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-content {
+            padding: 3px 10px 0 20px;
+        }
+
+        .why-content h2 {
+            font-size: 25px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: var(--pcs-blue);
+            margin-bottom: 13px;
+        }
+
+        .why-content h2 span {
+            color: var(--pcs-orange);
+        }
+
+        .why-content p {
+            color: #5d7289;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 17px;
+        }
+
+        .benefits {
+            display: flex;
+            gap: 22px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: #385875;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .benefit i {
+            color: #0b5b9e;
+            font-size: 19px;
+        }
+
+
+        /* =========================================
+           RESOURCE BOX
+        ========================================= */
+
+        .resource-box {
+            background: #f7fbfe;
+            border: 1px solid #dce7ef;
+            border-radius: 5px;
+            padding: 20px 18px;
+        }
+
+        .resource-box h3 {
+            font-size: 16px;
+            color: var(--pcs-blue);
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .resource-box h3 i {
+            float: right;
+            font-size: 12px;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            color: #0866b3;
+            font-size: 11.5px;
+            line-height: 1.4;
+            margin-bottom: 13px;
+            transition: .2s;
+        }
+
+        .resource-link:last-child {
+            margin-bottom: 0;
+        }
+
+        .resource-link i {
+            color: var(--pcs-orange);
+            margin-right: 10px;
+            font-size: 9px;
+        }
+
+        .resource-link:hover {
+            color: var(--pcs-orange);
+        }
+
+
+        /* =========================================
+           CONTENT SECTIONS
+        ========================================= */
+
+        .content-section {
+            padding: 22px 0;
+        }
+
+        .content-image {
+            height: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-text {
+            padding: 12px 15px;
+        }
+
+        .content-text .mini-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: var(--pcs-orange);
+            font-weight: 800;
+            margin-bottom: 9px;
+        }
+
+        .content-text h2 {
+            color: var(--pcs-blue);
+            font-size: 27px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .content-text p {
+            color: #64788e;
+            font-size: 13.5px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta-section {
+            background:
+                linear-gradient(90deg, rgba(7,42,72,.97), rgba(10,54,91,.90)),
+                url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1600&q=80")
+                center / cover;
+            padding: 31px 0;
+            color: #fff;
+        }
+
+        .cta-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta-left {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .cta-icon {
+            width: 47px;
+            height: 47px;
+            border: 2px solid #fff;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .cta-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .cta-middle {
+            font-size: 11px;
+            line-height: 1.55;
+            max-width: 310px;
+            color: #d9e7f1;
+        }
+
+        .cta-button {
+            background: var(--pcs-orange);
+            color: #fff;
+            border-radius: 25px;
+            padding: 12px 22px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            color: #fff;
+            background: #dc4215;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+            background: #fff;
+            padding: 22px 0 15px;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e3eaf0;
+        }
+
+        .footer-logo {
+            width: 145px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        .footer-nav a {
+            font-size: 10px;
+            color: #385875;
+        }
+
+        .footer-nav a:hover {
+            color: var(--pcs-orange);
+        }
+
+        .socials {
+            display: flex;
+            gap: 9px;
+        }
+
+        .socials a {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--pcs-blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            transition: .3s;
+        }
+
+        .socials a:hover {
+            background: var(--pcs-orange);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 13px;
+        }
+
+        .footer-bottom p {
+            color: #8190a0;
+            font-size: 9px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           MOBILE NAVIGATION
+        ========================================= */
+
+        .navbar-toggler {
+            border: none;
+            padding: 5px;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            width: 25px;
+            height: 20px;
+            position: relative;
+            background-image: none !important;
+        }
+
+        .navbar-toggler-icon:before,
+        .navbar-toggler-icon:after,
+        .navbar-toggler-icon {
+            background: transparent;
+        }
+
+        .navbar-toggler-icon:before {
+            content: "\f0c9";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 25px;
+            color: var(--pcs-blue);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1199px) {
+
+            .container {
+                max-width: 94%;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero-image {
+                width: 58%;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 22px;
+            }
+
+        }
+
+
+        @media (max-width: 991px) {
+
+            .pcs-header {
+                height: auto;
+                min-height: 76px;
+            }
+
+            .navbar {
+                padding: 13px 0;
+            }
+
+            .navbar-collapse {
+                background: #fff;
+                margin-top: 14px;
+                padding: 12px 0 15px;
+                border-top: 1px solid #eee;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 0;
+                margin-bottom: 3px;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 9px 10px !important;
+            }
+
+            .navbar-nav .nav-link.active:after {
+                display: none;
+            }
+
+            .header-btn {
+                margin-left: 10px;
+                margin-top: 8px;
+                display: inline-flex;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 60px 0;
+            }
+
+            .hero-copy {
+                width: 55%;
+            }
+
+            .hero-image {
+                width: 55%;
+                opacity: .9;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .mindset-card {
+                margin-top: 18px;
+            }
+
+            .benefits {
+                gap: 12px;
+            }
+
+            .cta-flex {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .pcs-logo {
+                width: 145px;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 290px;
+                opacity: 1;
+                background:
+                    linear-gradient(180deg,
+                        rgba(237,246,251,.1),
+                        rgba(237,246,251,.0)),
+                    url("https://www.pcs-safety.com/wp-content/uploads/2026/04/PCS-Pictures-768x432.png")
+                    center / cover;
+            }
+
+            .hero-image:after {
+                width: 190px;
+                height: 60px;
+            }
+
+            .hero-image-label {
+                width: 175px;
+                height: 60px;
+                font-size: 11px;
+            }
+
+            .hero-content {
+                padding: 48px 0 35px;
+            }
+
+            .hero-copy {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                max-width: 100%;
+            }
+
+            .hero-small-text {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                flex-wrap: wrap;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+
+            .training-card {
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+
+            .mindset-card {
+                min-height: 240px;
+            }
+
+            .why-section {
+                padding: 50px 0;
+            }
+
+            .why-image-wrap {
+                height: 240px;
+                margin-bottom: 25px;
+            }
+
+            .why-content {
+                padding: 0;
+            }
+
+            .why-content h2 {
+                font-size: 24px;
+            }
+
+            .benefits {
+                flex-wrap: wrap;
+            }
+
+            .benefit {
+                width: 45%;
+            }
+
+            .resource-box {
+                margin-top: 25px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+
+            .content-image {
+                height: 250px;
+                margin-bottom: 25px;
+            }
+
+            .content-text {
+                padding: 0;
+            }
+
+            .cta-flex {
+                display: block;
+            }
+
+            .cta-left {
+                margin-bottom: 17px;
+            }
+
+            .cta-middle {
+                margin-bottom: 18px;
+            }
+
+            .footer-top {
+                display: block;
+            }
+
+            .footer-logo {
+                margin-bottom: 20px;
+            }
+
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 18px;
+            }
+
+            .footer-bottom {
+                display: block;
+            }
+
+            .footer-bottom p {
+                margin-bottom: 6px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-heading h2 {
+                font-size: 23px;
+            }
+
+            .benefit {
+                width: 100%;
+            }
+
+            .cta-title {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+
+
+
+
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="container">
+
+            <div class="hero-copy">
+
+                <div class="hero-label">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                    <strong>CPR, AED &amp; First Aid Certification</strong>
+
+                    <span></span>
+
+                </div>
+
+
+                <h1>
+                    CPR, AED &amp; First Aid<br>
+                    <span class="orange">Certification.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    PCS Safety provides CPR, AED and first aid certification
+                    for teams that need practical emergency response training in the workplace.
+                </p>
+
+
+                <p class="hero-small-text">
+                    Build employee confidence, strengthen emergency response skills,
+                    and complete training through nationally recognized instruction.
+                    Flexible delivery options make it easier to train teams around your schedule.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#training" class="btn-pcs">
+                        Explore Certification
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+
+                    <a href="#contact" class="btn-outline-pcs">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="hero-image-label">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>
+                    Ready to Respond.<br>
+                    Ready to Help.
+                </span>
+            </div>
+
+    </div>
+
+</section>
+<section class="section" id="training">
+    <div class="container">
+        <div class="section-heading">
+            <h2>What’s Included in <span>CPR, AED &amp; First Aid Certification?</span></h2>
+            <p>Practical emergency response training designed for workplace teams.</p>
+        </div>
+
+        <div class="row training-grid">
+            <div class="col-lg-3 col-md-6">
+                <div class="training-card">
+                    <div class="training-icon orange"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>AHA or Red Cross CPR &amp; First Aid</h3>
+                    <p>Recognized certification courses help employees assess a scene, provide basic first aid, and respond to cardiac emergencies with greater confidence.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="training-card">
+                    <div class="training-icon blue"><i class="fa-solid fa-laptop-house"></i></div>
+                    <h3>On-Site &amp; Flexible Training</h3>
+                    <p>Choose delivery options that fit your schedule and operations, including blended learning or in-person sessions with guided, hands-on practice.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="training-card">
+                    <div class="training-icon orange"><i class="fa-solid fa-id-card"></i></div>
+                    <h3>2-Year Certification Cards</h3>
+                    <p>Successful participants receive certification cards valid for two years, helping employers keep records current and plan refresher training.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="training-card">
+                    <div class="training-icon blue"><i class="fa-solid fa-language"></i></div>
+                    <h3>Bilingual Training Available</h3>
+                    <p>English and Spanish training options support understanding, participation, and clear emergency response steps across diverse teams.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="mindset-card">
+                    <h3>Train your team to</h3>
+                    <h3><span>respond with confidence.</span></h3>
+                    <p>Practical skills. Recognized certification. Workplace readiness.</p>
+                    <div class="orange-line"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="resource-box h-100">
+                    <h3>Related Safety Resources <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                    <a class="resource-link" href="https://www.pcs-safety.com/osha-compliance-training/">
+                        <i class="fa-solid fa-arrow-right"></i> OSHA Compliance Training
+                    </a>
+                    <a class="resource-link" href="https://www.pcs-safety.com/aed-readiness-at-work-placement-confidence-and-what-to-do-before-an-emergency/">
+                        <i class="fa-solid fa-arrow-right"></i> AED Readiness Guidance
+                    </a>
+                    <a class="resource-link" href="https://www.pcs-safety.com/first-aid-kit-compliance-are-your-supplies-osha-and-ansi-isea-certified/">
+                        <i class="fa-solid fa-arrow-right"></i> First Aid Kit Compliance Resources
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="why-section" id="why">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="why-image-wrap">
+                    <img src="https://www.pcs-safety.com/wp-content/uploads/2026/04/PCS-Pictures-768x432.png"
+                         alt="Employee CPR AED response training in the workplace"
+                         class="why-image">
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+                <div class="why-content">
+                    <h2>Build Workplace <span>Emergency Readiness</span></h2>
+                    <p>
+                        Workplaces need employees who can recognize an emergency, follow clear response steps,
+                        and act while professional help is being arranged. CPR, AED and first aid training gives
+                        teams practical instruction they can use during medical emergencies.
+                    </p>
+                    <div class="benefits">
+                        <div class="benefit">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Build Employee<br>Confidence</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fa-solid fa-people-group"></i>
+                            <span>Train Teams Around<br>Your Schedule</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fa-solid fa-shield-heart"></i>
+                            <span>Strengthen Workplace<br>Readiness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content-section" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+          
+            <div class="col-lg-6">
+                <div class="content-text">
+                    <div class="mini-label">Workplace Certification</div>
+                    <h2>Practical CPR, AED &amp; First Aid Training</h2>
+                    <p>
+                        PCS Safety provides practical emergency response training for teams that need
+                        employees prepared to respond effectively during medical emergencies. Participants
+                        learn how to assess a scene, provide basic first aid, and respond to cardiac emergencies.
+                    </p>
+                </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="content-image">
+                    <img src="https://img.magnific.com/free-photo/group-diverse-people-cpr-training-class_53876-31182.jpg?t=st=1789739653~exp=1789743253~hmac=03e5ae449bce0b2806ed170b3fcf5805c85b7d5e0aea78609a85793316c53c03&w=1480"
+                         alt="CPR AED first aid certification training">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content-section" style="background:#f7fafc;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                         alt="Workplace emergency response training">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="content-text">
+                    <div class="mini-label">Workplace Preparedness</div>
+                    <h2>Connect Certification to Broader Safety Planning</h2>
+                    <p>
+                        Workplace emergency readiness can be supported by connecting CPR, AED and first aid
+                        certification with clear emergency procedures and related safety planning. PCS Safety
+                        also provides OSHA compliance training, AED readiness guidance, and first aid kit
+                        compliance resources.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                         alt="Workplace first aid preparedness">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="content-text">
+                    <div class="mini-label">OSHA First Aid Requirements</div>
+                    <h2>Support Training with Clear Emergency Procedures</h2>
+                    <p>
+                        OSHA’s first-aid rule addresses trained personnel and readily available first-aid
+                        supplies when outside medical treatment is not in near proximity. Employers can
+                        connect certification with broader workplace preparedness and emergency procedures.
+                    </p>
+                    <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.151"
+                       class="btn-outline-pcs" target="_blank" rel="noopener">
+                        View OSHA First Aid Requirements
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section" id="contact">
+
+    <div class="container">
+
+        <div class="cta-flex">
+
+
+            <div class="cta-left">
+
+                <div class="cta-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="cta-title">
+
+                    Prepare Your Team.<br>
+                    Build Emergency Readiness.
+
+                </div>
+
+            </div>
+
+
+            <div class="cta-middle">
+
+                Give your employees practical emergency response skills with flexible CPR, AED and first aid training.
+
+            </div>
+
+
+            <a href="#" class="cta-button">
+
+                Request Training
+
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <img
+                src="cropped-pcs-logo (1).webp"
+                alt="PCS Workplace Safety"
+                class="footer-logo">
+
+
+            <div class="footer-nav">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#training">
+                    Certification
+                </a>
+
+                <a href="#about">
+                    Workplace Preparedness
+                </a>
+
+                <a href="#why">
+                    Why Training Matters
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 PCS Safety. All rights reserved.
+            </p>
+
+            <p>
+                Ready to Respond. Ready to Help.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

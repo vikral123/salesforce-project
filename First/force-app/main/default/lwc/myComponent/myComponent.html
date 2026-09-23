@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Person Form">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-input
+                label="First Name"
+                value={firstName}
+                onchange={handleFirstname}>
+            </lightning-input>
+
+            <lightning-input
+                label="Last Name"
+                value={lastName}
+                onchange={handleLastName}>
+            </lightning-input>
+
+            <br/>
+
+            <lightning-button
+                label="Submit"
+                variant="brand"
+                onclick={handleSubmit}>
+            </lightning-button>
+
+            <template if:true={showData}>
+                <div class="slds-box slds-m-top_medium">
+                    <h3><strong>Submitted Data</strong></h3>
+
+                    <p>
+                        <strong>User Name:</strong>
+                        {submittedName}
+                    </p>
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

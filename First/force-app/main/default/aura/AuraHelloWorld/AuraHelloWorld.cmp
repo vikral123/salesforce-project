@@ -1,0 +1,32 @@
+<aura:component
+    implements="flexipage:availableForAllPageTypes,force:appHostable"
+    access="global">
+
+    <aura:attribute name="userName" type="String"/>
+    <aura:attribute name="email" type="String"/>
+
+    <lightning:card title="User Registration">
+
+        <div class="slds-p-around_medium">
+
+            <lightning:input
+                label="User Name"
+                value="{!v.userName}" />
+
+            <lightning:input
+                type="email"
+                label="Email"
+                value="{!v.email}" />
+
+            <br/>
+
+            <lightning:button
+                label="Submit"
+                variant="brand"
+                onclick="{!c.submitForm}" />
+
+        </div>
+
+    </lightning:card>
+
+</aura:component>

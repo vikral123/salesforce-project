@@ -1,0 +1,73 @@
+<template>
+
+<lightning-card title="PDF Data Viewer">
+
+
+<lightning-input
+type="file"
+accept=".pdf"
+label="Upload PDF"
+onchange={handleFile}>
+</lightning-input>
+
+
+
+<template if:true={displayData}>
+
+
+<div class="slds-p-around_medium">
+
+
+<p>
+PDF Page:
+{currentPdfPage}
+/
+{totalPdfPages}
+</p>
+
+
+<p>
+Data Page:
+{currentDataPage}
+/
+{totalDataPages}
+</p>
+
+
+
+<lightning-button
+label="Previous 100"
+onclick={previousDataPage}
+disabled={disablePrevious}>
+</lightning-button>
+
+
+
+<lightning-button
+label="Next 100"
+onclick={nextDataPage}
+disabled={disableNext}>
+</lightning-button>
+
+
+
+</div>
+
+
+
+<template for:each={displayData} for:item="row">
+
+<p key={row}>
+{row}
+</p>
+
+</template>
+
+
+
+</template>
+
+
+</lightning-card>
+
+</template>

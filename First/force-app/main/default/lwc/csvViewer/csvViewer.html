@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="CSV Data">
+
+        <template if:true={hasData}>
+            <lightning-datatable
+                key-field="_rowId"
+                data={csvData}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <template if:false={hasData}>
+            <div class="slds-p-around_medium slds-text-color_weak">
+                No data to display yet.
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

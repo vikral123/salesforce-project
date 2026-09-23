@@ -1,0 +1,3258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dental Safety Training | PCS Safety</title>
+
+    <meta name="description"
+          content="PCS Safety provides dental safety training for California dental practices covering OSHA compliance, infection control, sharps handling, PPE use and emergency response.">
+
+    <!-- =====================================================
+         BOOTSTRAP 4.6
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
+
+    <style>
+
+        :root {
+
+            --pcs-blue: #123d63;
+
+            --pcs-dark-blue: #092d4d;
+
+            --pcs-orange: #f15a24;
+
+            --pcs-light-blue: #eef7fc;
+
+            --pcs-soft-blue: #f6fafc;
+
+            --pcs-text: #61758a;
+
+            --pcs-border: #dce7ef;
+
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Inter", Arial, sans-serif;
+
+            color: var(--pcs-blue);
+
+            background: #ffffff;
+
+            overflow-x: hidden;
+
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+
+        a {
+            text-decoration: none !important;
+        }
+
+
+        .container {
+
+            max-width: 1180px;
+
+        }
+
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .pcs-header {
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #e8eef2;
+
+            position: relative;
+
+            z-index: 999;
+
+        }
+
+
+        .navbar {
+
+            min-height: 88px;
+
+            padding: 10px 0;
+
+        }
+
+
+        .pcs-logo {
+
+            width: 165px;
+
+            height: auto;
+
+        }
+
+
+        .navbar-nav {
+
+            align-items: center;
+
+        }
+
+
+        .navbar-nav .nav-item {
+
+            margin-left: 27px;
+
+        }
+
+
+        .navbar-nav .nav-link {
+
+            color: #1c3c58 !important;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            padding: 9px 0 !important;
+
+            transition: .25s ease;
+
+            position: relative;
+
+        }
+
+
+        .navbar-nav .nav-link:hover {
+
+            color: var(--pcs-orange) !important;
+
+        }
+
+
+        .navbar-nav .nav-link.active {
+
+            color: var(--pcs-orange) !important;
+
+        }
+
+
+        .navbar-nav .nav-link.active:after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 30px;
+
+            height: 2px;
+
+            background: var(--pcs-orange);
+
+        }
+
+
+        .header-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--pcs-orange);
+
+            color: #ffffff !important;
+
+            padding: 12px 19px !important;
+
+            border-radius: 25px;
+
+            font-size: 12px !important;
+
+            font-weight: 700 !important;
+
+            margin-left: 4px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .header-button:hover {
+
+            background: #d94414;
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            background: var(--pcs-light-blue);
+
+            min-height: 505px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-content {
+
+            padding: 74px 0 78px;
+
+            position: relative;
+
+            z-index: 5;
+
+        }
+
+
+        .hero-copy {
+
+            width: 51%;
+
+        }
+
+
+        .hero-kicker {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            color: var(--pcs-blue);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .hero-kicker i {
+
+            color: var(--pcs-orange);
+
+            font-size: 10px;
+
+        }
+
+
+        .hero-kicker span {
+
+            width: 30px;
+
+            height: 2px;
+
+            background: var(--pcs-blue);
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 44px;
+
+            line-height: 1.1;
+
+            font-weight: 800;
+
+            letter-spacing: -1.7px;
+
+            margin-bottom: 20px;
+
+            color: var(--pcs-blue);
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--pcs-orange);
+
+        }
+
+
+        .hero-description {
+
+            color: #365b78;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            max-width: 520px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .hero-support {
+
+            color: #71859a;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            max-width: 510px;
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+        .btn-pcs {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            background: var(--pcs-orange);
+
+            color: #ffffff;
+
+            padding: 13px 21px;
+
+            border-radius: 28px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            border: 2px solid var(--pcs-orange);
+
+            transition: .3s ease;
+
+        }
+
+
+        .btn-pcs:hover {
+
+            background: #d94414;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .btn-pcs-outline {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            background: #ffffff;
+
+            color: var(--pcs-blue);
+
+            padding: 13px 23px;
+
+            border: 1px solid #47728f;
+
+            border-radius: 28px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition: .3s ease;
+
+        }
+
+
+        .btn-pcs-outline:hover {
+
+            background: var(--pcs-blue);
+
+            color: #ffffff;
+
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+
+            position: absolute;
+
+            right: 0;
+
+            top: 0;
+
+            width: 56%;
+
+            height: 100%;
+
+            background-image:
+
+                linear-gradient(
+
+                    90deg,
+
+                    #eef7fc 0%,
+
+                    rgba(238,247,252,.92) 7%,
+
+                    rgba(238,247,252,.15) 30%,
+
+                    rgba(238,247,252,0) 100%
+
+                ),
+
+                url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1500&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .hero-badge {
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            width: 245px;
+
+            height: 78px;
+
+            background: var(--pcs-blue);
+
+            clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding-left: 28px;
+
+            color: #ffffff;
+
+        }
+
+
+        .hero-badge i {
+
+            font-size: 25px;
+
+            margin-right: 12px;
+
+            color: #ffffff;
+
+        }
+
+
+        .hero-badge-text {
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            line-height: 1.35;
+
+        }
+
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .section {
+
+            padding: 13px 0;
+
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            max-width: 760px;
+
+            margin: 0 auto 42px;
+
+        }
+
+
+        .section-heading .small-title {
+
+            color: var(--pcs-orange);
+
+            text-transform: uppercase;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-heading h2 {
+
+            color: var(--pcs-blue);
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+            line-height: 1.25;
+
+            margin-bottom: 11px;
+
+        }
+
+
+        .section-heading h2 span {
+
+            color: var(--pcs-orange);
+
+        }
+
+
+        .section-heading p {
+
+            color: var(--pcs-text);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+        }
+
+
+
+        /* =====================================================
+           SERVICE CARDS
+        ====================================================== */
+
+        .service-card {
+
+            height: 100%;
+
+            min-height: 250px;
+
+            padding: 27px 22px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--pcs-border);
+
+            border-radius: 6px;
+
+            transition: all .3s ease;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .service-card:before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 4px;
+
+            height: 0;
+
+            background: var(--pcs-orange);
+
+            transition: .3s;
+
+        }
+
+
+        .service-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 18px 40px rgba(18,61,99,.10);
+
+        }
+
+
+        .service-card:hover:before {
+
+            height: 100%;
+
+        }
+
+
+        .service-icon {
+
+            width: 53px;
+
+            height: 53px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+            color: #ffffff;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .service-icon.orange {
+
+            background: var(--pcs-orange);
+
+        }
+
+
+        .service-icon.blue {
+
+            background: #0b649d;
+
+        }
+
+
+        .service-card h3 {
+
+            color: var(--pcs-blue);
+
+            font-size: 15px;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            margin-bottom: 11px;
+
+        }
+
+
+        .service-card p {
+
+            color: var(--pcs-text);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+        }
+
+
+        .service-card a {
+
+            color: var(--pcs-blue);
+
+        }
+
+
+
+        /* =====================================================
+           OFFICE SAFETY SECTION
+        ====================================================== */
+
+        .office-safety {
+
+            background: #f2f8fc;
+
+            padding: 13px 0;
+
+        }
+
+
+        .office-image {
+
+            height: 330px;
+
+            border-radius: 6px;
+
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+
+        .office-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .office-image:after {
+
+            content: "";
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            width: 105px;
+
+            height: 65px;
+
+            background: var(--pcs-orange);
+
+            clip-path: polygon(35% 0,100% 0,100% 100%,0 100%);
+
+        }
+
+
+        .office-content {
+
+            padding-left: 25px;
+
+        }
+
+
+        .office-content .tag {
+
+            text-transform: uppercase;
+
+            font-size: 10px;
+
+            letter-spacing: 1.4px;
+
+            font-weight: 800;
+
+            color: var(--pcs-orange);
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .office-content h2 {
+
+            font-size: 27px;
+
+            line-height: 1.25;
+
+            color: var(--pcs-blue);
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .office-content h2 span {
+
+            color: var(--pcs-orange);
+
+        }
+
+
+        .office-content p {
+
+            color: var(--pcs-text);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .check-list {
+
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .check-list li {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 9px;
+
+            color: #385873;
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .check-list i {
+
+            color: var(--pcs-orange);
+
+            margin-top: 3px;
+
+        }
+
+
+
+        /* =====================================================
+           REAL IMAGE CONTENT SECTIONS
+        ====================================================== */
+
+        .feature-section {
+
+            padding: 13px 0;
+
+        }
+
+
+        .feature-image {
+
+            height: 300px;
+
+            border-radius: 6px;
+
+            overflow: hidden;
+
+            box-shadow: 0 12px 30px rgba(15,50,75,.08);
+
+        }
+
+
+        .feature-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .feature-content {
+
+            padding: 5px 20px;
+
+        }
+
+
+        .feature-content .eyebrow {
+
+            color: var(--pcs-orange);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .feature-content h2 {
+
+            color: var(--pcs-blue);
+
+            font-size: 27px;
+
+            line-height: 1.3;
+
+            font-weight: 800;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .feature-content p {
+
+            color: var(--pcs-text);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .feature-link {
+
+            color: var(--pcs-orange);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .feature-link i {
+
+            margin-left: 5px;
+
+        }
+
+
+
+        /* =====================================================
+           COMPLIANCE STRIP
+        ====================================================== */
+
+        .compliance-section {
+
+            background: var(--pcs-dark-blue);
+
+            padding: 48px 0;
+
+            color: #ffffff;
+
+        }
+
+
+        .compliance-content {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .compliance-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+
+        .compliance-icon {
+
+            width: 52px;
+
+            height: 52px;
+
+            border: 1px solid rgba(255,255,255,.45);
+
+            border-radius: 7px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 21px;
+
+        }
+
+
+        .compliance-title h3 {
+
+            margin: 0;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+        }
+
+
+        .compliance-title h3 span {
+
+            color: var(--pcs-orange);
+
+        }
+
+
+        .compliance-text {
+
+            max-width: 410px;
+
+            color: #d4e1eb;
+
+            font-size: 12px;
+
+            line-height: 1.65;
+
+        }
+
+
+        .compliance-button {
+
+            background: var(--pcs-orange);
+
+            color: #ffffff;
+
+            border-radius: 25px;
+
+            padding: 12px 20px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+        }
+
+
+        .compliance-button:hover {
+
+            color: #ffffff;
+
+            background: #d94414;
+
+        }
+
+
+
+        /* =====================================================
+           CEU SECTION
+        ====================================================== */
+
+        .ceu-section {
+
+            padding: 65px 0;
+
+            background: #f7fafc;
+
+        }
+
+
+        .ceu-box {
+
+            background: #ffffff;
+
+            border: 1px solid var(--pcs-border);
+
+            border-radius: 6px;
+
+            padding: 31px;
+
+            height: 100%;
+
+        }
+
+
+        .ceu-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            background: var(--pcs-light-blue);
+
+            color: var(--pcs-orange);
+
+            border-radius: 6px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 15px;
+
+            font-size: 19px;
+
+        }
+
+
+        .ceu-box h3 {
+
+            color: var(--pcs-blue);
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .ceu-box p {
+
+            color: var(--pcs-text);
+
+            font-size: 12.5px;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+        }
+
+
+        .resource-box {
+
+            background: var(--pcs-blue);
+
+            color: #ffffff;
+
+            border-radius: 6px;
+
+            padding: 31px;
+
+            height: 100%;
+
+        }
+
+
+        .resource-box h3 {
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .resource-link {
+
+            display: block;
+
+            color: #dcebf5;
+
+            font-size: 11.5px;
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.12);
+
+        }
+
+
+        .resource-link:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .resource-link i {
+
+            color: var(--pcs-orange);
+
+            margin-right: 8px;
+
+        }
+
+
+        .resource-link:hover {
+
+            color: #ffffff;
+
+        }
+
+
+
+        /* =====================================================
+           FINAL CTA
+        ====================================================== */
+
+        .final-cta {
+
+            background:
+
+                linear-gradient(
+
+                    90deg,
+
+                    rgba(10,43,72,.98),
+
+                    rgba(18,61,99,.91)
+
+                ),
+
+                url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=85")
+
+                center / cover;
+
+            padding: 57px 0;
+
+            color: #ffffff;
+
+        }
+
+
+        .final-cta-content {
+
+            text-align: center;
+
+            max-width: 760px;
+
+            margin: auto;
+
+        }
+
+
+        .final-cta-content .small-title {
+
+            color: #ff7442;
+
+            text-transform: uppercase;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .final-cta h2 {
+
+            font-size: 31px;
+
+            line-height: 1.25;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .final-cta p {
+
+            color: #d5e3ed;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            max-width: 620px;
+
+            margin: 0 auto 22px;
+
+        }
+
+
+        .final-cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            background: var(--pcs-orange);
+
+            color: #ffffff;
+
+            padding: 13px 23px;
+
+            border-radius: 26px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .final-cta-button:hover {
+
+            background: #d94414;
+
+            color: #ffffff;
+
+        }
+
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .footer {
+
+            background: #ffffff;
+
+            padding: 25px 0 15px;
+
+        }
+
+
+        .footer-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding-bottom: 19px;
+
+            border-bottom: 1px solid #e3e9ee;
+
+        }
+
+
+        .footer-logo {
+
+            width: 145px;
+
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            gap: 23px;
+
+        }
+
+
+        .footer-links a {
+
+            color: #45637a;
+
+            font-size: 10px;
+
+        }
+
+
+        .footer-links a:hover {
+
+            color: var(--pcs-orange);
+
+        }
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 8px;
+
+        }
+
+
+        .social-links a {
+
+            width: 29px;
+
+            height: 29px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background: var(--pcs-blue);
+
+            font-size: 11px;
+
+            transition: .3s;
+
+        }
+
+
+        .social-links a:hover {
+
+            background: var(--pcs-orange);
+
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding-top: 13px;
+
+        }
+
+
+        .footer-bottom p {
+
+            color: #8a98a6;
+
+            font-size: 9px;
+
+            margin: 0;
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE NAV
+        ====================================================== */
+
+        .navbar-toggler {
+
+            border: none;
+
+            padding: 4px;
+
+        }
+
+
+        .navbar-toggler:focus {
+
+            outline: none;
+
+        }
+
+
+        .navbar-toggler-icon {
+
+            background-image: none !important;
+
+            width: 25px;
+
+            height: 25px;
+
+        }
+
+
+        .navbar-toggler-icon:after {
+
+            content: "\f0c9";
+
+            font-family: "Font Awesome 6 Free";
+
+            font-weight: 900;
+
+            color: var(--pcs-blue);
+
+            font-size: 23px;
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE - 1199
+        ====================================================== */
+
+        @media(max-width:1199px) {
+
+            .container {
+                max-width: 94%;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 18px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE - 991
+        ====================================================== */
+
+        @media(max-width:991px) {
+
+            .navbar {
+                min-height: 76px;
+            }
+
+            .navbar-collapse {
+                background: #ffffff;
+                margin-top: 10px;
+                padding: 10px 0 15px;
+                border-top: 1px solid #edf0f3;
+            }
+
+            .navbar-nav {
+                align-items: flex-start;
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 9px 8px !important;
+            }
+
+            .navbar-nav .nav-link.active:after {
+                display: none;
+            }
+
+            .header-button {
+                margin: 7px 0 0 8px;
+                display: inline-flex;
+            }
+
+            .hero-copy {
+                width: 56%;
+            }
+
+            .hero-image {
+                width: 58%;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .compliance-content {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .compliance-text {
+                max-width: 100%;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE - 767
+        ====================================================== */
+
+        @media(max-width:767px) {
+
+            .pcs-logo {
+                width: 145px;
+            }
+
+
+            .hero {
+
+                min-height: auto;
+
+            }
+
+
+            .hero-content {
+
+                padding: 48px 0 38px;
+
+            }
+
+
+            .hero-copy {
+
+                width: 100%;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 14px;
+
+            }
+
+
+            .hero-image {
+
+                position: relative;
+
+                width: 100%;
+
+                height: 310px;
+
+                background-image:
+
+                    linear-gradient(
+
+                        180deg,
+
+                        rgba(238,247,252,.05),
+
+                        rgba(238,247,252,0)
+
+                    ),
+
+                    url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85");
+
+            }
+
+
+            .hero-badge {
+
+                width: 200px;
+
+                height: 65px;
+
+            }
+
+
+            .hero-badge-text {
+
+                font-size: 10px;
+
+            }
+
+
+            .section {
+
+                padding: 13px 0;
+
+            }
+
+
+            .section-heading {
+
+                margin-bottom: 30px;
+
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .service-card {
+
+                margin-bottom: 15px;
+
+                min-height: auto;
+
+            }
+
+
+            .office-safety {
+
+                padding: 52px 0;
+
+            }
+
+
+            .office-image {
+
+                height: 260px;
+
+                margin-bottom: 25px;
+
+            }
+
+
+            .office-content {
+
+                padding-left: 0;
+
+            }
+
+
+            .office-content h2 {
+
+                font-size: 24px;
+
+            }
+
+
+            .feature-section {
+
+                padding: 52px 0;
+
+            }
+
+
+            .feature-image {
+
+                height: 250px;
+
+                margin-bottom: 25px;
+
+            }
+
+
+            .feature-content {
+
+                padding: 0;
+
+            }
+
+
+            .feature-content h2 {
+
+                font-size: 24px;
+
+            }
+
+
+            .compliance-content {
+
+                display: block;
+
+            }
+
+
+            .compliance-title {
+
+                margin-bottom: 18px;
+
+            }
+
+
+            .compliance-text {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .ceu-section {
+
+                padding: 52px 0;
+
+            }
+
+
+            .resource-box {
+
+                margin-top: 18px;
+
+            }
+
+
+            .final-cta {
+
+                padding: 50px 20px;
+
+            }
+
+
+            .final-cta h2 {
+
+                font-size: 26px;
+
+            }
+
+
+            .footer-top {
+
+                display: block;
+
+            }
+
+
+            .footer-logo {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .footer-links {
+
+                flex-wrap: wrap;
+
+                gap: 13px 20px;
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .footer-bottom {
+
+                display: block;
+
+            }
+
+
+            .footer-bottom p {
+
+                margin-bottom: 7px;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE - 480
+        ====================================================== */
+
+        @media(max-width:480px) {
+
+            .hero h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            .hero-buttons {
+
+                display: block;
+
+            }
+
+
+            .btn-pcs,
+            .btn-pcs-outline {
+
+                width: 100%;
+
+                justify-content: center;
+
+                margin-bottom: 10px;
+
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 23px;
+
+            }
+
+
+            .hero-image {
+
+                height: 250px;
+
+            }
+
+
+            .hero-badge {
+
+                width: 175px;
+
+                height: 58px;
+
+            }
+
+
+            .hero-badge i {
+
+                font-size: 19px;
+
+                margin-right: 7px;
+
+            }
+
+
+            .office-image {
+
+                height: 220px;
+
+            }
+
+
+            .feature-image {
+
+                height: 220px;
+
+            }
+
+
+            .final-cta h2 {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="pcs-header">
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand"
+               href="https://www.pcs-safety.com/">
+
+                <img
+                    src="https://www.pcs-safety.com/wp-content/uploads/2026/07/cropped-pcs-logo.jpg"
+                    alt="PCS Safety"
+                    class="pcs-logo">
+
+            </a>
+
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#pcsMenu"
+                aria-controls="pcsMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- MENU -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="pcsMenu">
+
+
+                <ul class="navbar-nav ml-auto">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/about-us/">
+
+                            About Us
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/workplace-safety/">
+
+                            Workplace Safety
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/safety-work-hub/">
+
+                            Safety Work Hub
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/industries-we-serve/">
+
+                            Industries
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="https://www.pcs-safety.com/resources/">
+
+                            Resources
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="header-button"
+                            href="https://www.pcs-safety.com/contact/">
+
+                            Contact Us
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <div class="container">
+
+
+            <div class="hero-copy">
+
+
+                <div class="hero-kicker">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Dental Safety Training
+
+                    <span></span>
+
+                </div>
+
+
+
+                <h1>
+
+                    Safer Dental Offices.
+
+                    <br>
+
+                    <span>Stronger Teams.</span>
+
+                </h1>
+
+
+
+                <p class="hero-description">
+
+                    PCS Safety provides dental safety training
+                    for California dental practices.
+
+                </p>
+
+
+
+                <p class="hero-support">
+
+                    We help offices improve OSHA compliance,
+                    strengthen written programs, and support
+                    safer daily procedures. Our training covers
+                    infection control, sharps handling, PPE use,
+                    and site-specific safety guidance.
+
+                </p>
+
+
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        href="https://www.pcs-safety.com/contact/"
+                        class="btn-pcs">
+
+                        Schedule Training
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="#training"
+                        class="btn-pcs-outline">
+
+                        Explore Training
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-image">
+
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <div class="hero-badge-text">
+
+                Practical Training.
+                <br>
+                Safer Dental Practices.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT'S INCLUDED
+====================================================== -->
+
+<section
+    class="section"
+    id="training">
+
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <div class="small-title">
+
+                Dental Workplace Safety
+
+            </div>
+
+
+            <h2>
+
+                What's Included in
+
+                <span>Dental Safety Training?</span>
+
+            </h2>
+
+
+            <p>
+
+                PCS Safety provides practical, site-specific
+                training designed around the real safety needs
+                of California dental practices.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="row">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="service-card">
+
+
+                    <div class="service-icon orange">
+
+                        <i class="fa-solid fa-file-shield"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        Site-Specific Safety Plan
+                        <br>
+                        Including IIPP Manual
+
+                    </h3>
+
+
+                    <p>
+
+                        Establish a clear safety framework
+                        tailored to your dental office. This
+                        can support OSHA compliance training
+                        and written safety program development.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="service-card">
+
+
+                    <div class="service-icon blue">
+
+                        <i class="fa-solid fa-virus-slash"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        Bloodborne Pathogens
+                        &amp; Infection Control
+
+                    </h3>
+
+
+                    <p>
+
+                        Review exposure control basics,
+                        safer work practices and staff
+                        responsibilities tied to bloodborne
+                        pathogens compliance.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="service-card">
+
+
+                    <div class="service-icon orange">
+
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        Sharps Handling, PPE
+                        &amp; Emergency Response
+
+                    </h3>
+
+
+                    <p>
+
+                        Learn practical procedures for
+                        handling sharps, using PPE, reporting
+                        incidents and responding to workplace
+                        exposure risks.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 4 -->
+
+            <div class="col-lg-6 col-md-6 mb-4">
+
+                <div class="service-card">
+
+
+                    <div class="service-icon blue">
+
+                        <i class="fa-solid fa-clipboard-check"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        Cal/OSHA Compliance Review
+                        for Dental Offices
+
+                    </h3>
+
+
+                    <p>
+
+                        Review key documentation, training
+                        expectations and office procedures
+                        that support a more inspection-ready
+                        dental workplace.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 5 -->
+
+            <div class="col-lg-6 col-md-6 mb-4">
+
+                <div class="service-card">
+
+
+                    <div class="service-icon orange">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        CEU Credit Available
+
+                    </h3>
+
+
+                    <p>
+
+                        CEUs are available for eligible courses.
+                        Training connects written programs with
+                        practical workplace procedures involving
+                        sharps, chemicals and infectious materials.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DENTAL OFFICE SAFETY
+====================================================== -->
+
+<section class="office-safety">
+
+
+    <div class="container">
+
+
+        <div class="row align-items-center">
+ <div class="col-lg-7">
+
+
+                <div class="office-content">
+
+
+                    <div class="tag">
+
+                        Practical Safety Training
+
+                    </div>
+
+
+                    <h2>
+
+                        Dental Office Safety Procedures
+                        <span>&amp; Staff Responsibilities</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Dental teams work in fast-paced environments
+                        where exposure risks can change throughout
+                        the day. Our training helps staff understand
+                        their day-to-day safety responsibilities,
+                        follow written procedures and respond
+                        appropriately to workplace incidents.
+
+                    </p>
+
+
+
+                    <ul class="check-list">
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Follow written safety procedures
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Respond appropriately to exposure incidents
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Use PPE correctly during patient care
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Handle chemicals and sharps safely
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Understand SDS and hazard communication
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+
+                <div class="office-image">
+
+                    <img
+                        src="https://www.pcs-safety.com/wp-content/uploads/2026/04/69.png"
+                        alt="Dental Safety Training for California Dental Practices">
+
+                </div>
+
+
+            </div>
+
+
+
+           
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURE - IMAGE 69
+====================================================== -->
+
+<section class="feature-section">
+
+
+    <div class="container">
+
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+
+
+                <div class="feature-image">
+
+                    <img
+                        src="https://www.pcs-safety.com/wp-content/uploads/2026/04/69.png"
+                        alt="Dental Safety Training">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+
+                <div class="feature-content">
+
+
+                    <div class="eyebrow">
+
+                        California Dental Practices
+
+                    </div>
+
+
+                    <h2>
+
+                        Dental Safety Training
+                        for California Dental Practices
+
+                    </h2>
+
+
+                    <p>
+
+                        Dental staff participate in workplace
+                        safety training focused on OSHA compliance,
+                        sharps handling, exposure prevention and
+                        daily safety procedures for California
+                        dental offices.
+
+                    </p>
+
+
+                    <p>
+
+                        Training is designed to connect safety
+                        requirements with the procedures staff
+                        perform during everyday patient care.
+
+                    </p>
+
+
+                    <a
+                        href="https://www.pcs-safety.com/contact/"
+                        class="feature-link">
+
+                        Schedule Dental Safety Training
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURE - IMAGE 70
+====================================================== -->
+
+<section
+    class="feature-section"
+    style="background:#f7fafc;">
+
+
+    <div class="container">
+
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6 order-lg-2">
+
+
+                <div class="feature-image">
+
+                    <img
+                        src="https://www.pcs-safety.com/wp-content/uploads/2026/04/70.png"
+                        alt="Infection Control and PPE Training in Dental Office">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-6 order-lg-1">
+
+
+                <div class="feature-content">
+
+
+                    <div class="eyebrow">
+
+                        Infection Control &amp; PPE
+
+                    </div>
+
+
+                    <h2>
+
+                        Infection Control and PPE
+                        Training in a Dental Office
+
+                    </h2>
+
+
+                    <p>
+
+                        A dental team member reviews proper PPE
+                        use and infection control procedures in a
+                        clinical setting, including gloves, masks,
+                        protective eyewear and safe patient care
+                        practices.
+
+                    </p>
+
+
+                    <p>
+
+                        Practical instruction helps teams reinforce
+                        safer procedures throughout their normal
+                        clinical workflow.
+
+                    </p>
+
+
+                    <a
+                        href="https://www.pcs-safety.com/contact/"
+                        class="feature-link">
+
+                        Learn About Training
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPLIANCE STRIP
+====================================================== -->
+
+<section class="compliance-section">
+
+
+    <div class="container">
+
+
+        <div class="compliance-content">
+
+
+            <div class="compliance-title">
+
+
+                <div class="compliance-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Build a More
+
+                    <span>Inspection-Ready</span>
+
+                    Practice
+
+                </h3>
+
+
+            </div>
+
+
+
+            <div class="compliance-text">
+
+                Strengthen your dental office safety program
+                with practical training, written procedures,
+                exposure prevention and California workplace
+                safety guidance.
+
+            </div>
+
+
+
+            <a
+                href="https://www.pcs-safety.com/contact/"
+                class="compliance-button">
+
+                Get Started
+
+                <i class="fa-solid fa-arrow-right ml-1"></i>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CEU + RESOURCES
+====================================================== -->
+
+<section class="ceu-section">
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-lg-6 mb-4 mb-lg-0">
+
+
+                <div class="ceu-box">
+
+
+                    <div class="ceu-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <h3>
+
+                        Continuing Education
+                        &amp; Safety Training
+
+                    </h3>
+
+
+                    <p>
+
+                        Dental offices manage routine exposure
+                        risks involving sharps, chemicals and
+                        potentially infectious materials.
+                        Eligible courses may provide CEU credit
+                        while helping connect written programs
+                        with real workplace procedures.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+
+                <div class="resource-box">
+
+
+                    <h3>
+
+                        Related Safety Resources
+
+                    </h3>
+
+
+                    <a
+                        href="https://www.pcs-safety.com/osha-compliance-training/"
+                        class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        OSHA Compliance Training
+
+                    </a>
+
+
+                    <a
+                        href="https://www.pcs-safety.com/sdshazard-communication-management/"
+                        class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        SDS &amp; Hazard Communication Management
+
+                    </a>
+
+
+                    <a
+                        href="https://www.osha.gov/bloodborne-pathogens"
+                        target="_blank"
+                        class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        OSHA Bloodborne Pathogens
+
+                    </a>
+
+
+                    <a
+                        href="https://www.dir.ca.gov/dosh/"
+                        target="_blank"
+                        class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        California Cal/OSHA Resources
+
+                    </a>
+
+
+                    <a
+                        href="https://www.pcs-safety.com/top-osha-violations-in-california-workplaces-and-how-to-avoid-them/"
+                        class="resource-link">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Top OSHA Violations in California
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final-cta">
+
+
+    <div class="container">
+
+
+        <div class="final-cta-content">
+
+
+            <div class="small-title">
+
+                Dental Safety Training
+
+            </div>
+
+
+            <h2>
+
+                Protect Your Team.
+                <br>
+                Strengthen Your Practice.
+
+            </h2>
+
+
+            <p>
+
+                Give your dental team practical safety training
+                designed around the real risks and procedures
+                of your workplace.
+
+            </p>
+
+
+            <a
+                href="https://www.pcs-safety.com/contact/"
+                class="final-cta-button">
+
+                Schedule Dental Safety Training
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <a href="https://www.pcs-safety.com/">
+
+                <img
+                    src="https://www.pcs-safety.com/wp-content/uploads/2026/07/cropped-pcs-logo.jpg"
+                    alt="PCS Workplace Safety"
+                    class="footer-logo">
+
+            </a>
+
+
+
+            <div class="footer-links">
+
+
+                <a href="https://www.pcs-safety.com/">
+                    Home
+                </a>
+
+
+                <a href="https://www.pcs-safety.com/about-us/">
+                    About Us
+                </a>
+
+
+                <a href="https://www.pcs-safety.com/workplace-safety/">
+                    Workplace Safety
+                </a>
+
+
+                <a href="https://www.pcs-safety.com/industries-we-serve/">
+                    Industries
+                </a>
+
+
+                <a href="https://www.pcs-safety.com/resources/">
+                    Resources
+                </a>
+
+
+                <a href="https://www.pcs-safety.com/contact/">
+                    Contact
+                </a>
+
+
+            </div>
+
+
+
+            <div class="social-links">
+
+
+                <a href="#">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 PCS Safety. All rights reserved.
+
+            </p>
+
+
+            <p>
+
+                Safety Today. A Stronger Tomorrow.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

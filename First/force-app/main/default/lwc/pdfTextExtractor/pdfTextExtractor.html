@@ -1,0 +1,140 @@
+<template>
+    <lightning-card title="PDF Text Extractor tarunss" icon-name="doctype:pdf">
+
+        <div class="slds-p-around_medium container">
+
+            <!-- ============================================================
+                 UPLOAD AREA
+            ============================================================= -->
+            <template if:false={hasExtractedText}>
+
+                <div
+                    class={dropZoneClass}
+                    ondragover={handleDragOver}
+                    ondragleave={handleDragLeave}
+                    ondrop={handleDrop}
+                >
+                    <lightning-icon
+                        icon-name="utility:upload"
+                        size="medium"
+                        class="slds-m-bottom_small">
+                    </lightning-icon>
+
+                    <p class="drop-zone-text">
+                        Drag and drop a PDF file here
+                    </p>
+
+                    <p class="drop-zone-subtext">or</p>
+
+                    <lightning-button
+                        variant="brand"
+                        label="Browse File"
+                        icon-name="utility:file"
+                        onclick={handleBrowseClick}>
+                    </lightning-button>
+
+                    <input
+                        type="file"
+                        class="file-input slds-hide"
+                        accept=".pdf,application/pdf"
+                        onchange={handleFileInputChange} />
+
+                    <p class="drop-zone-hint">PDF files only</p>
+                </div>
+
+                <!-- Selected file details -->
+                <template if:true={hasSelectedFile}>
+                    <div class="file-details slds-box slds-box_x-small slds-m-top_medium">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <lightning-icon icon-name="doctype:pdf" size="small"></lightning-icon>
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="file-name"><strong>{fileName}</strong></p>
+                                <p class="file-meta">
+                                    Size: {fileSizeLabel} &nbsp;|&nbsp; Last Modified: {fileLastModifiedLabel}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Size warning -->
+                <template if:true={hasSizeWarning}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning slds-m-top_small" role="alert">
+                        <lightning-icon icon-name="utility:warning" size="x-small" variant="inverse" class="slds-m-right_x-small"></lightning-icon>
+                        <span>{sizeWarningMessage}</span>
+                    </div>
+                </template>
+
+                <!-- Error message -->
+                <template if:true={hasError}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-m-top_small" role="alert">
+                        <lightning-icon icon-name="utility:error" size="x-small" variant="inverse" class="slds-m-right_x-small"></lightning-icon>
+                        <span>{errorMessage}</span>
+                    </div>
+                </template>
+
+                <!-- Action buttons -->
+                <div class="slds-m-top_medium button-row">
+                    <lightning-button
+                        variant="brand"
+                        label="Submit"
+                        icon-name="utility:upload"
+                        onclick={handleSubmit}
+                        disabled={disableSubmit}
+                        class="slds-m-right_small">
+                    </lightning-button>
+
+                    <lightning-button
+                        variant="neutral"
+                        label="Clear"
+                        onclick={handleClear}
+                        disabled={isProcessing}>
+                    </lightning-button>
+                </div>
+
+                <!-- Spinner (server-side extraction - single call, no per-page progress) -->
+                <template if:true={isProcessing}>
+                    <div class="progress-container slds-m-top_medium slds-is-relative">
+                        <lightning-spinner alternative-text="Extracting text\u2026" size="medium"></lightning-spinner>
+                        <p class="progress-text slds-m-top_x-small">{progressLabel}</p>
+                    </div>
+                </template>
+
+            </template>
+
+            <!-- ============================================================
+                 RESULTS AREA
+            ============================================================= -->
+            <template if:true={hasExtractedText}>
+
+                <template if:true={hasSuccess}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_success slds-m-bottom_small" role="alert">
+                        <lightning-icon icon-name="utility:success" size="x-small" variant="inverse" class="slds-m-right_x-small"></lightning-icon>
+                        <span>{successMessage}</span>
+                    </div>
+                </template>
+
+                <div class="results-header slds-grid slds-grid_align-spread slds-m-bottom_small">
+                    <div>
+                        <p><strong>{fileName}</strong></p>
+                    </div>
+                    <lightning-button
+                        variant="neutral"
+                        label="Clear / Upload Another"
+                        icon-name="utility:refresh"
+                        onclick={handleClear}>
+                    </lightning-button>
+                </div>
+
+                <div class="extracted-text-container slds-box slds-box_small">
+                    <pre class="extracted-text">{extractedText}</pre>
+                </div>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

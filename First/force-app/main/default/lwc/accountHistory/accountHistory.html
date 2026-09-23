@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Account History" icon-name="standard:account">
+        <div class="history-container">
+            <div class="history-header">
+                <div>Account</div>
+                <div>Field</div>
+                <div>Old Value</div>
+                <div>New Value</div>
+                <div>Changed By</div>
+                <div>Date</div>
+            </div>
+
+            <template if:true={isLoading}>
+                <div class="loading-container">
+                    <lightning-spinner alternative-text="Loading Account History" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:true={hasRecords}>
+                    <template for:each={historyRecords} for:item="record">
+                        <div class="history-row" key={record.id}>
+                            <div class="account-name">{record.account}</div>
+                            <div class="field-name">{record.field}</div>
+                            <div class="old-value">{record.oldValue}</div>
+                            <div class="new-value">{record.newValue}</div>
+                            <div class="changed-by">{record.changedBy}</div>
+                            <div class="date">{record.date}</div>
+                        </div>
+                    </template>
+
+                    <div class="view-more-container">
+                        <lightning-button label="View More" variant="base" onclick={handleViewMore}></lightning-button>
+                    </div>
+                </template>
+
+                <template if:false={hasRecords}>
+                    <div class="no-records">No Account History Found</div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

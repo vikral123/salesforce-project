@@ -1,0 +1,15 @@
+.pdf-viewer-container {
+    width: 100%;
+    max-height: 800px;
+    overflow-y: auto;
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background: #525659;
+}
+
+.pdf-page {
+    display: block;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}

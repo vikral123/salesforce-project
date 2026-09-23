@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | Bluethink Inc.</title>
+
+
+    <!-- =========================================
+         BOOTSTRAP 4
+    ========================================== -->
+
+    <link rel="preload"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'"
+          id="bootstrap-css"
+          href="https://www.bluethinkinc.com/wp-content/themes/bluethinkinc/assets1/styles/bootstrap4/bootstrap.min.css?ver=1634217771"
+          media="all">
+
+    <noscript>
+        <link rel="stylesheet"
+              href="https://www.bluethinkinc.com/wp-content/themes/bluethinkinc/assets1/styles/bootstrap4/bootstrap.min.css?ver=1634217771">
+    </noscript>
+
+
+    <!-- =========================================
+         GOOGLE FONT
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================================
+         CUSTOM CSS
+         All CSS is scoped under .bt-thankyou-page
+    ========================================== -->
+
+    <style>
+
+        /* =========================================
+           GLOBAL PAGE
+        ========================================== */
+
+        .bt-thankyou-page {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            box-sizing: border-box;
+
+            background: #f5f9fd;
+            color: #17283a;
+
+            font-family: "Inter", Arial, sans-serif;
+        }
+
+
+        .bt-thankyou-page *,
+        .bt-thankyou-page *::before,
+        .bt-thankyou-page *::after {
+            box-sizing: border-box;
+        }
+
+
+        .bt-thankyou-page a {
+            text-decoration: none !important;
+        }
+
+
+        /* =========================================
+           BACKGROUND SHAPES
+        ========================================== */
+
+        .bt-thankyou-page .bt-circle {
+            position: absolute;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+
+        .bt-thankyou-page .bt-circle.bt-circle-one {
+            width: 360px;
+            height: 360px;
+
+            background: rgba(0, 91, 172, 0.06);
+
+            top: -190px;
+            left: -120px;
+        }
+
+
+        .bt-thankyou-page .bt-circle.bt-circle-two {
+            width: 330px;
+            height: 330px;
+
+            background: rgba(0, 174, 239, 0.07);
+
+            right: -120px;
+            bottom: -160px;
+        }
+
+
+        .bt-thankyou-page .bt-circle.bt-circle-three {
+            width: 100px;
+            height: 100px;
+
+            border: 20px solid rgba(0, 91, 172, 0.04);
+
+            right: 12%;
+            top: 25%;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================== */
+
+        .bt-thankyou-page .bt-header {
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+
+            padding: 17px 0;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            border-bottom: 1px solid #e7edf3;
+        }
+
+
+        .bt-thankyou-page .bt-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .bt-thankyou-page .bt-header .container .bt-logo {
+            width: 175px;
+            max-width: 100%;
+            height: auto;
+
+            display: inline-block;
+
+            vertical-align: middle;
+        }
+
+
+        /* =========================================
+           MAIN SECTION
+        ========================================== */
+
+        .bt-thankyou-page .bt-main {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 55px 15px;
+        }
+
+
+        .bt-thankyou-page .bt-main > .container {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+        }
+
+
+        /* =========================================
+           THANK YOU CARD
+        ========================================== */
+
+        .bt-thankyou-page .bt-main > .container > .bt-thankyou-card {
+            width: 100%;
+            max-width: 780px;
+
+            margin: 0 auto;
+
+            padding: 48px 45px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.98);
+
+            border: 1px solid #e2eaf1;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 15px 45px rgba(25, 65, 100, 0.08);
+        }
+
+
+        /* =========================================
+           SUCCESS ICON
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-success-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #005baa,
+                #00a8e8
+            );
+
+            box-shadow:
+                0 10px 25px rgba(0, 91, 172, 0.20);
+
+            animation: btThankyouPop 0.6s ease;
+        }
+
+
+        .bt-thankyou-page .bt-thankyou-card .bt-success-icon span {
+            display: block;
+
+            color: #ffffff;
+
+            font-size: 34px;
+
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+
+        @keyframes btThankyouPop {
+
+            0% {
+                opacity: 0;
+
+                transform: scale(0.5);
+            }
+
+            70% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                opacity: 1;
+
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* =========================================
+           SUBTITLE
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-subtitle {
+            margin: 0 0 10px;
+
+            color: #0071b9;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            line-height: 1.4;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================
+           MAIN HEADING
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-thankyou-title {
+            margin: 0 0 15px;
+
+            padding: 0;
+
+            color: #17283a;
+
+            font-size: 38px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+        }
+
+
+        .bt-thankyou-page .bt-thankyou-card .bt-thankyou-title span {
+            display: inline;
+
+            background: linear-gradient(
+                90deg,
+                #005baa,
+                #00a8e8
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+        }
+
+
+        /* =========================================
+           DESCRIPTION
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-description {
+            max-width: 610px;
+
+            margin: 0 auto;
+
+            padding: 0;
+
+            color: #687787;
+
+            font-size: 15px;
+
+            font-weight: 400;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           BUTTON AREA
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions {
+            margin-top: 28px;
+
+            padding: 0;
+        }
+
+
+        /* =========================================
+           COMMON BUTTON
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 165px;
+
+            margin: 4px;
+
+            padding: 11px 20px;
+
+            border-radius: 6px;
+
+            font-family: "Inter", Arial, sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            text-align: center;
+
+            transition: all 0.3s ease;
+        }
+
+
+        /* =========================================
+           PRIMARY BUTTON
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-primary {
+            color: #ffffff !important;
+
+            background: linear-gradient(
+                90deg,
+                #005baa,
+                #008ed3
+            );
+
+            border: 1px solid transparent;
+
+            box-shadow:
+                0 7px 18px rgba(0, 91, 172, 0.18);
+        }
+
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-primary:hover,
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-primary:focus {
+            color: #ffffff !important;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 24px rgba(0, 91, 172, 0.25);
+        }
+
+
+        /* =========================================
+           SECONDARY BUTTON
+        ========================================== */
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-secondary {
+            color: #005baa !important;
+
+            background: #ffffff;
+
+            border: 1px solid #d7e2ec;
+
+            box-shadow: none;
+        }
+
+
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-secondary:hover,
+        .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn.bt-btn-secondary:focus {
+            color: #005baa !important;
+
+            background: #f4f9fd;
+
+            transform: translateY(-2px);
+
+            border-color: #c6d8e7;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        .bt-thankyou-page .bt-footer {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+
+            padding: 18px 15px;
+
+            text-align: center;
+
+            color: #82909d;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           TABLET / MOBILE
+        ========================================== */
+
+        @media (max-width: 767px) {
+
+            .bt-thankyou-page .bt-header {
+                padding: 15px 0;
+            }
+
+
+            .bt-thankyou-page .bt-header .container .bt-logo {
+                width: 155px;
+            }
+
+
+            .bt-thankyou-page .bt-main {
+                padding: 35px 15px;
+            }
+
+
+            .bt-thankyou-page .bt-main > .container > .bt-thankyou-card {
+                padding: 38px 22px;
+
+                border-radius: 18px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-success-icon {
+                width: 65px;
+                height: 65px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-success-icon span {
+                font-size: 30px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-thankyou-title {
+                font-size: 30px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-description {
+                font-size: 14px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-actions {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-actions .bt-btn {
+                width: 100%;
+
+                max-width: 260px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL MOBILE
+        ========================================== */
+
+        @media (max-width: 480px) {
+
+            .bt-thankyou-page .bt-main {
+                padding: 25px 12px;
+            }
+
+
+            .bt-thankyou-page .bt-main > .container > .bt-thankyou-card {
+                padding: 32px 18px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-thankyou-title {
+                font-size: 27px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-subtitle {
+                font-size: 11px;
+
+                letter-spacing: 1.2px;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-description {
+                font-size: 13px;
+
+                line-height: 1.65;
+            }
+
+
+            .bt-thankyou-page .bt-thankyou-card .bt-actions {
+                margin-top: 24px;
+            }
+
+
+            .bt-thankyou-page .bt-footer {
+                padding: 15px 12px;
+
+                font-size: 11px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     THANK YOU PAGE
+========================================== -->
+
+<div class="bt-thankyou-page">
+
+
+    <!-- =====================================
+         DECORATIVE BACKGROUND
+    ====================================== -->
+
+    <div class="bt-circle bt-circle-one"></div>
+
+    <div class="bt-circle bt-circle-two"></div>
+
+    <div class="bt-circle bt-circle-three"></div>
+
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="bt-header">
+
+        <div class="container text-center">
+
+            <a href="https://www.bluethinkinc.com/">
+
+                <img
+                    src="YOUR-BLUETHINK-LOGO-URL"
+                    alt="Bluethink Inc."
+                    class="bt-logo">
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="bt-main">
+
+        <div class="container">
+
+            <div class="bt-thankyou-card">
+
+
+                <!-- =================================
+                     SUCCESS ICON
+                ================================== -->
+
+                <div class="bt-success-icon">
+
+                    <span>✓</span>
+
+                </div>
+
+
+
+                <!-- =================================
+                     SUBTITLE
+                ================================== -->
+
+                <div class="bt-subtitle">
+
+                    Submission Successful
+
+                </div>
+
+
+
+                <!-- =================================
+                     HEADING
+                ================================== -->
+
+                <h1 class="bt-thankyou-title">
+
+                    Thank You for
+                    <span>Connecting!</span>
+
+                </h1>
+
+
+
+                <!-- =================================
+                     DESCRIPTION
+                ================================== -->
+
+                <p class="bt-description">
+
+                    We have received your details.
+                    Our team will get in touch with you shortly.
+
+                </p>
+
+
+
+                <!-- =================================
+                     BUTTONS
+                ================================== -->
+
+                <div class="bt-actions">
+
+
+                    <a
+                        href="https://www.bluethinkinc.com/"
+                        class="bt-btn bt-btn-primary">
+
+                        Back to Homepage
+
+                    </a>
+
+
+                    <a
+                        href="https://www.bluethinkinc.com/contact-us/"
+                        class="bt-btn bt-btn-secondary">
+
+                        Contact Our Team
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="bt-footer">
+
+        © 2026 Bluethink Inc. All Rights Reserved.
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =========================================
+     BOOTSTRAP JS
+========================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

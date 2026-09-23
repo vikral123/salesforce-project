@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Floor Wise Dashboard">
+
+       
+        <div class="chart-container">
+            <canvas class="chart"></canvas>
+        </div>
+
+        <div class="legend">
+
+       <template for:each={floorData} for:item="item">
+    <div key={item.floorName} class="legend-item">
+        <span class={item.colorClass}></span>
+        
+        <span>{item.floorName} ({item.total}) </span>
+        
+    </div>
+</template>
+
+        </div>
+
+    </lightning-card>
+</template>

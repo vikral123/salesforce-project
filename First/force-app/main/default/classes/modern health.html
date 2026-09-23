@@ -1,0 +1,2135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BlueThink Inc. | Digital Solutions</title>
+
+  <!-- Bootstrap 4.6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome 4.7 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0797ec;
+      --blue-dark: #063c78;
+      --blue-deep: #072e61;
+      --sky: #eaf8ff;
+      --text: #69819c;
+      --line: #dceefa;
+      --card-shadow: 0 10px 28px rgba(16, 110, 168, .08);
+      --green: #50bd73;
+      --violet: #8652e9;
+      --yellow: #f6b22c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #ffffff;
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all .2s ease;
+    }
+
+    a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1170px;
+    }
+
+    .section-space {
+      padding: 58px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 9px;
+      color: var(--blue);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .35px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .eyebrow i {
+      margin-right: 6px;
+      font-size: 9px;
+    }
+
+    .section-title {
+      max-width: 350px;
+      margin-bottom: 11px;
+      color: var(--blue-deep);
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -.55px;
+      line-height: 1.2;
+    }
+
+    .section-copy {
+      max-width: 325px;
+      margin-bottom: 19px;
+      color: #69829b;
+      font-size: 10px;
+      line-height: 1.55;
+    }
+
+    .btn-blue {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 37px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 22px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #068ae7 0%, #11ace8 100%);
+      box-shadow: 0 7px 17px rgba(0, 147, 233, .2);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .btn-blue:hover {
+      color: #ffffff;
+      box-shadow: 0 9px 22px rgba(0, 147, 233, .32);
+      transform: translateY(-2px);
+    }
+
+    .btn-blue i {
+      margin-left: 9px;
+      font-size: 10px;
+    }
+
+    .btn-white-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 37px;
+      padding: 0 18px;
+      border: 1px solid #1a9ce8;
+      border-radius: 22px;
+      color: #0979ca;
+      background: rgba(255, 255, 255, .9);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .btn-white-outline i {
+      margin-right: 8px;
+      font-size: 8px;
+    }
+
+    .btn-white-outline:hover {
+      color: #ffffff;
+      background: var(--blue);
+    }
+
+    /* Header */
+    .site-header {
+      position: relative;
+      z-index: 100;
+      background: #ffffff;
+    }
+
+    .navbar {
+      min-height: 62px;
+      padding: 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      margin-right: 42px;
+      color: var(--blue-deep) !important;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -.55px;
+    }
+
+    .logo-symbol {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      margin-right: 7px;
+    }
+
+    .logo-symbol .shape-one {
+      position: absolute;
+      top: 1px;
+      left: 6px;
+      width: 8px;
+      height: 22px;
+      border-radius: 2px;
+      background: #0679c7;
+      transform: skew(-25deg);
+    }
+
+    .logo-symbol .shape-two {
+      position: absolute;
+      top: 3px;
+      left: 14px;
+      width: 7px;
+      height: 20px;
+      border-radius: 2px;
+      background: #16b6dd;
+      transform: skew(-25deg);
+    }
+
+    .logo-symbol .shape-three {
+      position: absolute;
+      top: 8px;
+      left: 1px;
+      width: 22px;
+      height: 7px;
+      border-radius: 2px;
+      background: #07458d;
+      transform: skew(-24deg);
+    }
+
+    .navbar-nav {
+      align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      padding: 22px 10px 20px !important;
+      color: #315575 !important;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .active .nav-link {
+      color: var(--blue) !important;
+    }
+
+    .navbar-nav .active .nav-link:after {
+      position: absolute;
+      right: 10px;
+      bottom: 11px;
+      left: 10px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--blue);
+      content: "";
+    }
+
+    .dropdown-toggle:after {
+      margin-left: 4px;
+      vertical-align: 1px;
+      border-top-width: .35em;
+      border-right-width: .3em;
+      border-left-width: .3em;
+    }
+
+    .dropdown-menu {
+      margin-top: -2px;
+      padding: 7px 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: var(--card-shadow);
+      font-size: 11px;
+    }
+
+    .dropdown-item {
+      padding: 7px 14px;
+      color: #365978;
+    }
+
+    .dropdown-item:hover {
+      color: var(--blue);
+      background: #eef9ff;
+    }
+
+    .nav-search {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      color: #113f6c;
+      font-size: 12px;
+    }
+
+    .nav-get-started {
+      min-height: 31px;
+      margin-left: 5px;
+      padding: 0 15px;
+      font-size: 8px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 286px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(251, 254, 255, .99) 0%, rgba(247, 253, 255, .95) 39%, rgba(235, 249, 255, .4) 100%),
+        url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=90") center right / cover no-repeat;
+    }
+
+    .hero:before {
+      position: absolute;
+      top: -100px;
+      right: -64px;
+      width: 540px;
+      height: 405px;
+      border: 1px solid rgba(20, 148, 230, .15);
+      border-radius: 46%;
+      content: "";
+      transform: rotate(-17deg);
+    }
+
+    .hero:after {
+      position: absolute;
+      right: 10%;
+      bottom: -170px;
+      width: 650px;
+      height: 280px;
+      border: 1px solid rgba(0, 143, 232, .16);
+      border-radius: 50%;
+      content: "";
+      transform: rotate(-15deg);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 31px 0 26px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 4px 9px;
+      border-radius: 20px;
+      color: #1184c8;
+      background: #e6f6ff;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .hero h1 {
+      max-width: 450px;
+      margin-bottom: 10px;
+      color: var(--blue-deep);
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -.65px;
+      line-height: 1.08;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #087ddd;
+      font-size: 29px;
+      font-weight: 800;
+      letter-spacing: -1.15px;
+    }
+
+    .hero-text {
+      max-width: 335px;
+      margin-bottom: 14px;
+      color: #5f7890;
+      font-size: 10px;
+      line-height: 1.55;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .hero-stat-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 23px;
+      gap: 22px;
+    }
+
+    .hero-stat {
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-stat-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      border-radius: 50%;
+      color: #129ee9;
+      background: #e8f7ff;
+      font-size: 10px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: var(--blue-deep);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    .hero-stat small {
+      display: block;
+      margin-top: 2px;
+      color: #7890a7;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    /* Services */
+    .services {
+      background: linear-gradient(180deg, #f8fdff 0%, #ffffff 100%);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 11px;
+    }
+
+    .service-card {
+      min-height: 105px;
+      padding: 12px 16px 11px;
+      border: 1px solid #e0eff8;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: var(--card-shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 13px 26px rgba(16, 110, 168, .14);
+      transform: translateY(-4px);
+    }
+
+    .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 7px;
+      border-radius: 6px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0d8fe9, #0bb7e7);
+      font-size: 11px;
+    }
+
+    .service-card.green .icon-box {
+      background: linear-gradient(135deg, #42b96f, #77cb87);
+    }
+
+    .service-card.violet .icon-box {
+      background: linear-gradient(135deg, #7144df, #a264ec);
+    }
+
+    .service-card h4 {
+      min-height: 23px;
+      margin-bottom: 4px;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .service-card p {
+      min-height: 23px;
+      margin-bottom: 5px;
+      color: #7690a6;
+      font-size: 8px;
+      line-height: 1.4;
+    }
+
+    .card-arrow {
+      color: #0a88d6;
+      font-size: 11px;
+    }
+
+    /* Industry Section */
+    .industries {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(237, 249, 255, .96) 0%, rgba(234, 249, 255, .72) 64%, rgba(237, 249, 255, .25) 100%),
+        url("https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1800&q=85") center right / cover no-repeat;
+    }
+
+    .industries:before {
+      position: absolute;
+      right: -112px;
+      bottom: -103px;
+      width: 390px;
+      height: 280px;
+      border: 2px solid rgba(18, 152, 233, .13);
+      border-radius: 47%;
+      content: "";
+      transform: rotate(-19deg);
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 9px;
+    }
+
+    .industry-card {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 4px;
+      border: 1px solid #dceef7;
+      border-radius: 7px;
+      text-align: center;
+      background: rgba(255, 255, 255, .93);
+      box-shadow: 0 7px 17px rgba(40, 122, 171, .06);
+    }
+
+    .industry-card i {
+      display: block;
+      margin-bottom: 6px;
+      color: #129be8;
+      font-size: 16px;
+    }
+
+    .industry-card span {
+      display: block;
+      color: #345776;
+      font-size: 7px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    /* Why us */
+    .why-us {
+      background: #ffffff;
+    }
+
+    .why-visual {
+      position: relative;
+      min-height: 169px;
+      overflow: hidden;
+      border-radius: 46% 48% 48% 42%;
+      background:
+        linear-gradient(130deg, rgba(255,255,255,.17), rgba(218,245,255,.8)),
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=850&q=85") center / cover no-repeat;
+    }
+
+    .why-visual:before {
+      position: absolute;
+      top: -18px;
+      left: -20px;
+      width: 242px;
+      height: 202px;
+      border: 1px solid #b9e7f8;
+      border-radius: 48%;
+      content: "";
+      transform: rotate(-20deg);
+    }
+
+    .why-visual:after {
+      position: absolute;
+      top: 13px;
+      right: -10px;
+      width: 73px;
+      height: 142px;
+      border: 1px solid rgba(15, 151, 230, .2);
+      border-radius: 46%;
+      content: "";
+      transform: rotate(24deg);
+    }
+
+    .video-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      color: #ffffff;
+      background: #0a9ce9;
+      box-shadow: 0 5px 16px rgba(0, 141, 230, .33);
+      transform: translate(-50%, -50%);
+    }
+
+    .video-play i {
+      margin-left: 2px;
+      font-size: 12px;
+    }
+
+    .why-content {
+      padding-left: 35px;
+    }
+
+    .why-content .section-title {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .why-copy {
+      max-width: 355px;
+      margin-bottom: 17px;
+      color: #6f879e;
+      font-size: 9px;
+      line-height: 1.45;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px 24px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .benefit-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      margin-right: 9px;
+      border-radius: 7px;
+      color: #0c98e6;
+      background: #e8f7ff;
+      font-size: 12px;
+    }
+
+    .benefit-item strong {
+      display: block;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .benefit-item small {
+      display: block;
+      margin-top: 3px;
+      color: #8297aa;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    /* Impact */
+    .impact {
+      position: relative;
+      color: #ffffff;
+      background:
+        linear-gradient(90deg, rgba(3, 43, 77, .96), rgba(3, 68, 110, .85)),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85") center / cover no-repeat;
+    }
+
+    .impact .section-title,
+    .impact .eyebrow,
+    .impact .impact-copy {
+      color: #ffffff;
+    }
+
+    .impact .section-title {
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 1.08;
+    }
+
+    .impact-copy {
+      margin-bottom: 0;
+      font-size: 8px;
+    }
+
+    .impact-stat {
+      display: flex;
+      align-items: center;
+      min-height: 46px;
+    }
+
+    .impact-stat i {
+      width: 25px;
+      margin-right: 9px;
+      color: #14a5ea;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    .impact-stat strong {
+      display: block;
+      color: #ffffff;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .impact-stat span {
+      display: block;
+      margin-top: 4px;
+      color: #d0e5f3;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    /* Case Studies */
+    .case-card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid #dfedf7;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: var(--card-shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .case-card:hover {
+      box-shadow: 0 13px 27px rgba(16, 110, 168, .14);
+      transform: translateY(-4px);
+    }
+
+    .case-image {
+      width: 100%;
+      height: 58px;
+      object-fit: cover;
+    }
+
+    .case-body {
+      padding: 8px 10px 10px;
+    }
+
+    .case-label {
+      display: block;
+      margin-bottom: 3px;
+      color: #1093df;
+      font-size: 7px;
+      font-weight: 700;
+    }
+
+    .case-body h4 {
+      min-height: 13px;
+      margin-bottom: 4px;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .case-body p {
+      min-height: 29px;
+      margin-bottom: 6px;
+      color: #7890a6;
+      font-size: 7px;
+      line-height: 1.4;
+    }
+
+    .case-link {
+      color: #0789d9;
+      font-size: 7px;
+      font-weight: 700;
+    }
+
+    .case-link i {
+      margin-left: 4px;
+    }
+
+    /* Process */
+    .process {
+      background: #f9fdff;
+    }
+
+    .process-wrap {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 17px;
+    }
+
+    .process-wrap:before {
+      position: absolute;
+      top: 16px;
+      right: 8%;
+      left: 8%;
+      border-top: 1px dashed #a8d5eb;
+      content: "";
+    }
+
+    .process-step {
+      position: relative;
+      z-index: 1;
+      width: 19%;
+      padding: 0 8px;
+      text-align: center;
+      background: #f9fdff;
+    }
+
+    .process-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 7px;
+      border: 1px solid #d6eefa;
+      border-radius: 50%;
+      color: #0b95e4;
+      background: #ffffff;
+      font-size: 11px;
+    }
+
+    .process-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: #7c94aa;
+      font-size: 7px;
+      line-height: 1.35;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      position: relative;
+      min-height: 104px;
+      padding: 13px 13px 11px 45px;
+      border: 1px solid #e0eef7;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: var(--card-shadow);
+    }
+
+    .testimonial-avatar {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-card p {
+      min-height: 34px;
+      margin-bottom: 6px;
+      color: #5d7791;
+      font-size: 7px;
+      line-height: 1.45;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .testimonial-card small {
+      display: block;
+      margin-top: 2px;
+      color: #8398aa;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    .stars {
+      margin-top: 4px;
+      color: var(--yellow);
+      font-size: 7px;
+      letter-spacing: 1px;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding-bottom: 27px;
+    }
+
+    .cta-banner {
+      padding: 18px 26px;
+      border-radius: 8px;
+      color: #ffffff;
+      background:
+        linear-gradient(100deg, rgba(3, 153, 236, .96), rgba(98, 84, 221, .94)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1300&q=85") center / cover no-repeat;
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .cta-content > i {
+      margin-right: 17px;
+      font-size: 24px;
+      transform: rotate(-24deg);
+    }
+
+    .cta-banner h3 {
+      margin-bottom: 2px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -.35px;
+      line-height: 1.2;
+    }
+
+    .cta-banner p {
+      margin: 0;
+      color: #e9f8ff;
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .cta-banner .btn-blue {
+      min-height: 31px;
+      color: #1487d4;
+      background: #ffffff;
+      box-shadow: none;
+      font-size: 8px;
+    }
+
+    .cta-banner .btn-white-outline {
+      min-height: 31px;
+      border-color: rgba(255, 255, 255, .72);
+      color: #ffffff;
+      background: transparent;
+      font-size: 8px;
+    }
+
+    .cta-banner .btn-white-outline:hover {
+      color: #1387d5;
+      background: #ffffff;
+    }
+
+    /* Footer */
+    .footer {
+      padding-top: 23px;
+      background: #ffffff;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      color: var(--blue-deep);
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+    }
+
+    .footer-logo .logo-symbol {
+      margin-right: 6px;
+      transform: scale(.88);
+      transform-origin: left center;
+    }
+
+    .footer-brand-copy {
+      margin: 5px 0 0;
+      color: #7a91a7;
+      font-size: 7px;
+    }
+
+    .footer h5 {
+      margin-bottom: 9px;
+      color: var(--blue-deep);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .footer ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 5px;
+      color: #6f879f;
+      font-size: 7px;
+      line-height: 1.1;
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 6px;
+      color: #6f879f;
+      font-size: 7px;
+      line-height: 1.25;
+    }
+
+    .footer-contact i {
+      width: 14px;
+      color: #0789dc;
+      font-size: 8px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 5px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 19px;
+      height: 19px;
+      border-radius: 3px;
+      color: #ffffff;
+      background: #137cc3;
+      font-size: 8px;
+    }
+
+    .social-links a:hover {
+      color: #ffffff;
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      margin-top: 21px;
+      padding: 10px 0;
+      color: #d2e4f4;
+      background: #062c53;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    .footer-bottom-links {
+      text-align: right;
+    }
+
+    .footer-bottom-links a {
+      margin-left: 14px;
+      color: #d2e4f4;
+    }
+
+    /* Tablet */
+    @media (max-width: 991.98px) {
+      .navbar {
+        min-height: 63px;
+      }
+
+      .navbar-brand {
+        margin-right: 0;
+      }
+
+      .navbar-toggler {
+        border: 0;
+        outline: 0 !important;
+      }
+
+      .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .navbar-collapse {
+        padding: 9px 0 14px;
+      }
+
+      .navbar-nav {
+        align-items: flex-start;
+      }
+
+      .navbar-nav .nav-link {
+        padding: 10px 0 !important;
+      }
+
+      .navbar-nav .active .nav-link:after {
+        display: none;
+      }
+
+      .nav-search {
+        margin: 6px 0 7px;
+      }
+
+      .nav-get-started {
+        margin-left: 0;
+      }
+
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(251, 254, 255, .98), rgba(247, 253, 255, .88)),
+          url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1500&q=85") center / cover no-repeat;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .why-content {
+        padding-left: 15px;
+      }
+
+      .why-visual {
+        max-width: 300px;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+        margin-top: 16px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767.98px) {
+      body {
+        font-size: 14px;
+      }
+
+      .section-space {
+        padding: 45px 0;
+      }
+
+      .section-title {
+        font-size: 25px;
+      }
+
+      .section-copy {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 44px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero h1 span {
+        font-size: 31px;
+      }
+
+      .hero-text {
+        max-width: 440px;
+        font-size: 12px;
+      }
+
+      .hero-stat-list {
+        gap: 13px 18px;
+      }
+
+      .hero-stat {
+        min-width: 132px;
+      }
+
+      .hero-stat strong {
+        font-size: 12px;
+      }
+
+      .hero-stat small {
+        font-size: 9px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+        padding: 18px;
+      }
+
+      .service-card h4 {
+        min-height: auto;
+        font-size: 13px;
+      }
+
+      .service-card p {
+        min-height: auto;
+        font-size: 11px;
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .industry-card {
+        min-height: 95px;
+      }
+
+      .industry-card span {
+        font-size: 10px;
+      }
+
+      .why-content {
+        padding-left: 0;
+        margin-top: 30px;
+      }
+
+      .why-visual {
+        max-width: 100%;
+        min-height: 235px;
+      }
+
+      .why-content .section-title {
+        font-size: 24px;
+      }
+
+      .why-copy {
+        font-size: 11px;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-item strong {
+        font-size: 11px;
+      }
+
+      .benefit-item small {
+        font-size: 9px;
+      }
+
+      .impact-stat {
+        margin-top: 22px;
+      }
+
+      .impact-stat strong {
+        font-size: 22px;
+      }
+
+      .impact-stat span {
+        font-size: 9px;
+      }
+
+      .case-image {
+        height: 140px;
+      }
+
+      .case-body {
+        padding: 16px;
+      }
+
+      .case-body h4 {
+        font-size: 13px;
+      }
+
+      .case-body p,
+      .case-label,
+      .case-link {
+        font-size: 10px;
+      }
+
+      .process-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 8px;
+      }
+
+      .process-wrap:before {
+        display: none;
+      }
+
+      .process-step {
+        width: 100%;
+      }
+
+      .process-step strong {
+        font-size: 10px;
+      }
+
+      .process-step p {
+        font-size: 9px;
+      }
+
+      .testimonial-card {
+        min-height: 130px;
+      }
+
+      .testimonial-card p {
+        min-height: auto;
+        font-size: 10px;
+      }
+
+      .testimonial-card strong {
+        font-size: 10px;
+      }
+
+      .testimonial-card small,
+      .stars {
+        font-size: 8px;
+      }
+
+      .footer-column {
+        margin-bottom: 25px;
+      }
+
+      .footer h5,
+      .footer ul li,
+      .footer-contact,
+      .footer-brand-copy {
+        font-size: 10px;
+      }
+
+      .footer-bottom,
+      .footer-bottom-links {
+        text-align: center;
+        font-size: 9px;
+      }
+
+      .footer-bottom-links {
+        margin-top: 9px;
+      }
+
+      .footer-bottom-links a {
+        margin: 0 6px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-buttons {
+        display: block;
+      }
+
+      .hero-buttons .btn-blue,
+      .hero-buttons .btn-white-outline {
+        width: 100%;
+      }
+
+      .hero-buttons .btn-white-outline {
+        margin-top: 9px;
+      }
+
+      .hero-stat-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-stat {
+        min-width: 0;
+      }
+
+      .cta-banner {
+        padding: 21px 18px;
+      }
+
+      .cta-content > i {
+        display: none;
+      }
+
+      .cta-actions {
+        display: block;
+      }
+
+      .cta-actions .btn-blue,
+      .cta-actions .btn-white-outline {
+        width: 100%;
+      }
+
+      .cta-actions .btn-white-outline {
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#home">
+          <span class="logo-symbol">
+            <span class="shape-one"></span>
+            <span class="shape-two"></span>
+            <span class="shape-three"></span>
+          </span>
+          BlueThink Inc.
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="siteMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#services" data-toggle="dropdown">Services</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#services">Custom Software</a>
+                <a class="dropdown-item" href="#services">Mobile Development</a>
+                <a class="dropdown-item" href="#services">Web Development</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#industries" data-toggle="dropdown">Industries</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#industries">Healthcare</a>
+                <a class="dropdown-item" href="#industries">Finance</a>
+                <a class="dropdown-item" href="#industries">Education</a>
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <a href="#" class="nav-search" aria-label="Search">
+            <i class="fa fa-search"></i>
+          </a>
+
+          <a href="#contact" class="btn-blue nav-get-started">
+            Get Started <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Innovative Technology. Real Business Impact.</span>
+
+        <h1>
+          Turning Your Ideas Into
+          <span>Powerful Digital Solutions</span>
+        </h1>
+
+        <p class="hero-text">
+          We design, develop and scale custom software solutions that help
+          businesses grow, streamline operations and create better experiences
+          for their customers.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-blue">
+            Get Started <i class="fa fa-arrow-right"></i>
+          </a>
+
+          <a href="#about" class="btn-white-outline">
+            <i class="fa fa-play"></i> Watch Our Story
+          </a>
+        </div>
+
+        <div class="hero-stat-list">
+          <div class="hero-stat">
+            <span class="hero-stat-icon"><i class="fa fa-th"></i></span>
+            <span>
+              <strong>500+</strong>
+              <small>Projects Delivered</small>
+            </span>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat-icon"><i class="fa fa-heart"></i></span>
+            <span>
+              <strong>100+</strong>
+              <small>Happy Clients</small>
+            </span>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat-icon"><i class="fa fa-bar-chart"></i></span>
+            <span>
+              <strong>15+</strong>
+              <small>Industries Served</small>
+            </span>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat-icon"><i class="fa fa-star"></i></span>
+            <span>
+              <strong>98%</strong>
+              <small>Client Satisfaction</small>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section-space" id="services">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 mb-4 mb-lg-0">
+          <span class="eyebrow"><i class="fa fa-cogs"></i> Our Services</span>
+
+          <h2 class="section-title">
+            End-to-End Digital Solutions for Your Business
+          </h2>
+
+          <p class="section-copy">
+            From strategy to software, we offer a complete suite of technology
+            services to help you build, scale and succeed in the digital world.
+          </p>
+
+          <a href="#services" class="btn-blue">
+            Explore All Services <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="icon-box"><i class="fa fa-code"></i></span>
+              <h4>Custom Software<br>Development</h4>
+              <p>Scalable, secure and future-ready applications.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card green">
+              <span class="icon-box"><i class="fa fa-mobile"></i></span>
+              <h4>Mobile App<br>Development</h4>
+              <p>Engaging apps for iOS and Android platforms.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card violet">
+              <span class="icon-box"><i class="fa fa-desktop"></i></span>
+              <h4>Web Development</h4>
+              <p>Modern, responsive and performance-driven websites.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-box"><i class="fa fa-cloud"></i></span>
+              <h4>Cloud &amp; DevOps</h4>
+              <p>Reliable, secure and high-performance cloud solutions.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card violet">
+              <span class="icon-box"><i class="fa fa-line-chart"></i></span>
+              <h4>AI &amp; Data Analytics</h4>
+              <p>Turn data into business intelligence.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card green">
+              <span class="icon-box"><i class="fa fa-lightbulb-o"></i></span>
+              <h4>IT Consulting</h4>
+              <p>Strategic guidance for long-term growth.</p>
+              <a href="#" class="card-arrow"><i class="fa fa-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="industries section-space" id="industries">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 mb-4 mb-lg-0">
+          <span class="eyebrow"><i class="fa fa-certificate"></i> Industry Focus</span>
+
+          <h2 class="section-title">
+            Industry-Specific Solutions for Maximum Impact
+          </h2>
+
+          <p class="section-copy">
+            We understand every industry has unique challenges. That's why we
+            build tailored solutions that drive real results and long-term success.
+          </p>
+
+          <a href="#industries" class="btn-blue">
+            View All Industries <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="industry-grid">
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-heartbeat"></i>
+                <span>Healthcare &amp;<br>Pharma</span>
+              </div>
+            </div>
+
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-university"></i>
+                <span>Finance &amp;<br>Banking</span>
+              </div>
+            </div>
+
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-shopping-bag"></i>
+                <span>Retail &amp;<br>Ecommerce</span>
+              </div>
+            </div>
+
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-graduation-cap"></i>
+                <span>Education</span>
+              </div>
+            </div>
+
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-cogs"></i>
+                <span>Manufacturing</span>
+              </div>
+            </div>
+
+            <div class="industry-card">
+              <div>
+                <i class="fa fa-home"></i>
+                <span>Real Estate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us section-space" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3">
+          <div class="why-visual">
+            <button type="button" class="video-play" aria-label="Play story video">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="why-content">
+            <span class="eyebrow"><i class="fa fa-question-circle"></i> Why Choose Us</span>
+
+            <h2 class="section-title">Why Businesses Trust BlueThink</h2>
+
+            <p class="why-copy">
+              We combine technology, creativity and industry knowledge to deliver
+              solutions that make a real difference.
+            </p>
+
+            <div class="benefit-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-users"></i></span>
+                <span>
+                  <strong>Expert Team</strong>
+                  <small>100+ skilled professionals</small>
+                </span>
+              </div>
+
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-th"></i></span>
+                <span>
+                  <strong>Scalable Solutions</strong>
+                  <small>Built for growth</small>
+                </span>
+              </div>
+
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-clock-o"></i></span>
+                <span>
+                  <strong>Agile Approach</strong>
+                  <small>Faster turnaround time</small>
+                </span>
+              </div>
+
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-handshake-o"></i></span>
+                <span>
+                  <strong>Transparent Process</strong>
+                  <small>Clear communication</small>
+                </span>
+              </div>
+
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-link"></i></span>
+                <span>
+                  <strong>Cost Efficient</strong>
+                  <small>Get more value</small>
+                </span>
+              </div>
+
+              <div class="benefit-item">
+                <span class="benefit-icon"><i class="fa fa-shield"></i></span>
+                <span>
+                  <strong>Long-Term Support</strong>
+                  <small>We're with you always</small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="impact section-space" id="technologies">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3">
+          <span class="eyebrow"><i class="fa fa-line-chart"></i> Our Impact</span>
+          <h2 class="section-title">Our Impact<br>in Numbers</h2>
+          <p class="impact-copy">Real people. Real projects. Real results.</p>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="impact-stat">
+                <i class="fa fa-cubes"></i>
+                <div>
+                  <strong>500+</strong>
+                  <span>Projects Delivered</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="impact-stat">
+                <i class="fa fa-users"></i>
+                <div>
+                  <strong>100+</strong>
+                  <span>Happy Clients</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="impact-stat">
+                <i class="fa fa-industry"></i>
+                <div>
+                  <strong>15+</strong>
+                  <span>Industries Served</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="impact-stat">
+                <i class="fa fa-star"></i>
+                <div>
+                  <strong>98%</strong>
+                  <span>Client Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="section-space" id="case-studies">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 mb-4 mb-lg-0">
+          <span class="eyebrow"><i class="fa fa-file-text-o"></i> Featured Case Studies</span>
+
+          <h2 class="section-title">Success Stories That Inspire</h2>
+
+          <p class="section-copy">
+            Explore how we've helped businesses across industries achieve their
+            goals with innovative technology solutions.
+          </p>
+
+          <a href="#" class="btn-blue">
+            View All Case Studies <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <article class="case-card">
+                <img class="case-image"
+                     src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=700&q=85"
+                     alt="Pharmacy management platform">
+
+                <div class="case-body">
+                  <span class="case-label">Healthcare</span>
+                  <h4>Pharmacy Management Platform</h4>
+                  <p>A modern solution for seamless medicine management and patient care.</p>
+                  <a href="#" class="case-link">Read Case Study <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+              <article class="case-card">
+                <img class="case-image"
+                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=85"
+                     alt="Learning management system">
+
+                <div class="case-body">
+                  <span class="case-label">Education</span>
+                  <h4>Learning Management System</h4>
+                  <p>A scalable platform for better online learning experiences.</p>
+                  <a href="#" class="case-link">Read Case Study <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-4">
+              <article class="case-card">
+                <img class="case-image"
+                     src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=85"
+                     alt="E-commerce platform">
+
+                <div class="case-body">
+                  <span class="case-label">Finance</span>
+                  <h4>E-Commerce Platform</h4>
+                  <p>High-performance store with a seamless user experience.</p>
+                  <a href="#" class="case-link">Read Case Study <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process section-space">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <span class="eyebrow"><i class="fa fa-cog"></i> Our Process</span>
+          <h2 class="section-title">From Idea to Impact</h2>
+          <p class="section-copy">A clear and simple process to bring your vision to life.</p>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="process-wrap">
+            <div class="process-step">
+              <span class="process-icon"><i class="fa fa-search"></i></span>
+              <strong>01. Discover</strong>
+              <p>Understand your goals and challenges.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-icon"><i class="fa fa-sitemap"></i></span>
+              <strong>02. Plan</strong>
+              <p>Define the right strategy and solution.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-icon"><i class="fa fa-heart-o"></i></span>
+              <strong>03. Develop</strong>
+              <p>Build with best practices and latest tech.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-icon"><i class="fa fa-check"></i></span>
+              <strong>04. Test</strong>
+              <p>Ensure quality, security and performance.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-icon"><i class="fa fa-rocket"></i></span>
+              <strong>05. Deploy</strong>
+              <p>Launch and support for long-term success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-space pt-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 mb-4 mb-lg-0">
+          <span class="eyebrow"><i class="fa fa-comment-o"></i> Client Testimonials</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+
+          <p class="section-copy">
+            Don't just take our word for it. Here's what our clients have to say
+            about working with us.
+          </p>
+
+          <a href="#" class="btn-blue">
+            View More Reviews <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <article class="testimonial-card">
+                <img class="testimonial-avatar"
+                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=85"
+                     alt="Sarah Johnson">
+
+                <p>
+                  “BlueThink delivered our project on time with exceptional
+                  quality. We've extended the partnership!”
+                </p>
+
+                <strong>Sarah Johnson</strong>
+                <small>CEO, MedTech Co.</small>
+                <div class="stars">★★★★★</div>
+              </article>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+              <article class="testimonial-card">
+                <img class="testimonial-avatar"
+                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=85"
+                     alt="Michael Carter">
+
+                <p>
+                  “Their team is professional, responsive and truly understands
+                  our business needs. Highly recommended!”
+                </p>
+
+                <strong>Michael Carter</strong>
+                <small>CTO, RetailTech</small>
+                <div class="stars">★★★★★</div>
+              </article>
+            </div>
+
+            <div class="col-md-4">
+              <article class="testimonial-card">
+                <img class="testimonial-avatar"
+                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=85"
+                     alt="Emily Davis">
+
+                <p>
+                  “A great experience working with BlueThink. Their expertise
+                  and support made all the difference.”
+                </p>
+
+                <strong>Emily Davis</strong>
+                <small>Product Manager, FinTech</small>
+                <div class="stars">★★★★★</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="cta-content">
+              <i class="fa fa-paper-plane"></i>
+
+              <div>
+                <h3>Ready to Build Something Great?</h3>
+                <p>Let's turn your ideas into powerful digital solutions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="cta-actions">
+              <a href="#" class="btn-blue">
+                Get Started <i class="fa fa-arrow-right"></i>
+              </a>
+
+              <a href="#" class="btn-white-outline">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="careers">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 footer-column">
+          <a href="#home" class="footer-logo">
+            <span class="logo-symbol">
+              <span class="shape-one"></span>
+              <span class="shape-two"></span>
+              <span class="shape-three"></span>
+            </span>
+            BlueThink Inc.
+          </a>
+
+          <p class="footer-brand-copy">Ideas. Technology. Impact.</p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-column">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#industries">Industries</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-column">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-column">
+          <h5>Get in Touch</h5>
+
+          <div class="footer-contact">
+            <i class="fa fa-phone"></i>
+            <span>+1 (555) 123-4567</span>
+          </div>
+
+          <div class="footer-contact">
+            <i class="fa fa-envelope"></i>
+            <span>info@bluethinkinc.com</span>
+          </div>
+
+          <div class="footer-contact">
+            <i class="fa fa-map-marker"></i>
+            <span>123 Innovation Drive, CA 90210</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-column">
+          <h5>Follow Us</h5>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            © 2025 BlueThink Inc. All rights reserved.
+          </div>
+
+          <div class="col-md-6 footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Required Bootstrap 4.6 Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<template>
+    <template if:true={excelData}>
+        <lightning-datatable
+            key-field="Id"
+            data={excelData}
+            columns={columns}>
+        </lightning-datatable>
+    </template>
+</template>
